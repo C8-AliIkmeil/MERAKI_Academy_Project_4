@@ -1,9 +1,9 @@
 const mongoose = require("mongoose")
 const productsSchema = new mongoose.Schema({
-    afiaOil:{type:String},
-    naderSugar:{type:String},
-    sheepMeat:{type:String},
-    banana:{type:String},
-    orange:{type:String}
+    name:{type:String},
+    cost:{type:Number},
+    price:{type:Number},
+    img:{type:String},
+    category:[{type:mongoose.Schema.Types.ObjectId},ref="categories"]
 })
 module.exports=mongoose.model("Products",productsSchema)
