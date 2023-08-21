@@ -4,6 +4,6 @@ const productsSchema = new mongoose.Schema({
     cost:{type:Number},
     price:{type:Number},
     img:{type:String},
-    category:[{type:mongoose.Schema.Types.ObjectId},ref="categories"]
+    category:{type:mongoose.Schema.Types.ObjectId,ref:"categories"}
 })
 module.exports=mongoose.model("Products",productsSchema)
