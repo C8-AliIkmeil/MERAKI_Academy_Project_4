@@ -1,5 +1,11 @@
+.register{
+    padding-right:10% ;
+    padding-left: 10%;
+    padding-top: 2%;
+}
 .homebutton{
     float: left;
+    width: 5%;
 }
 .loginbutton{
     float: right;

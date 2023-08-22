@@ -30,17 +30,17 @@ return (
     <button className='loginButton' onClick={()=>{
         axios.post("http://localhost:5000/users/login",{email,password})
         .then((response)=>{
-            setLoginSucces(response.data.message)
             setToken(response.data.token)
             localStorage.setItem("token",response.data.token)
+            navigate("/loggedin")
         })
         .catch((err)=>{
             setErrorMessage(err.message)
+            console.log(err);
         })
     }}>Login</button>
     <br></br>
-    {loginSucces&&<>{navigate("/")}</>}
-    {errorMessage&&<>{errorMessage}</>}
+    {errorMessage&&<>Email or password that you entered is incorrect</>}
     </div>
   )
 }
