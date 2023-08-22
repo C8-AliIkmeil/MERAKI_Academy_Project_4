@@ -47,18 +47,20 @@ const Login =(req,res)=>{
             }
             const payload= {
                 userId: response._id,
-                author:response.fistName,
+                author:response.firstName,
                 role: response.role,
-                location: response.location
+                location: response.location,
+                userName: `${response.firstName.charAt(0).toUpperCase() + response.firstName.slice(1)} ${response.lastName.charAt(0).toUpperCase() + response.lastName.slice(1)}` 
             }
             const options = {
                 expiresIn:"60m"
             }
             const token = jwt.sign(payload,process.env.SECRET,options)
-            res.status(403).json({
+            res.status(200).json({
                 success:true,
                 message:"Valid login credentials",
-                token: token
+                token: token,
+                userName: `${response.firstName.charAt(0).toUpperCase() + response.firstName.slice(1)} ${response.lastName.charAt(0).toUpperCase() + response.lastName.slice(1)}`
             })
         }catch(error){
             throw new Error(error.message)
