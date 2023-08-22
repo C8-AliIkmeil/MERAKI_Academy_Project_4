@@ -10,6 +10,9 @@ const Home = () => {
         <button className="signupbutton" onClick={()=>{
             navigate("/users/register")
         }}>Sign Up</button>
+        <button className='loginbutton' onClick={()=>{
+            navigate('/users/login')
+        }}>Login</button>
     </div>
   )
 }

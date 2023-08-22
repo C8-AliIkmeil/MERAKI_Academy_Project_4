@@ -11,9 +11,9 @@ export const tokenContext =createContext()
 function App() {
   const [token, setToken] = useState("")
   const [isLoggedIn, setIsLoggedIn] = useState("")
-  
+  const [userName, setUserName] = useState("")
   return (
-    <tokenContext.Provider value={{token,setToken,isLoggedIn,setIsLoggedIn}}>
+    <tokenContext.Provider value={{token,setToken,isLoggedIn,setIsLoggedIn,userName,setUserName}}>
 
     <div className="App">
       <Routes>

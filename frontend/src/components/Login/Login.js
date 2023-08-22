@@ -12,12 +12,16 @@ const [password, setPassword] = useState("")
 const [loginSucces, setLoginSucces] = useState("")
 const [errorMessage, setErrorMessage] = useState("")
 const {setToken} = useContext(tokenContext)
-const {setIsLoggedIn}=useContext(tokenContext)    
+const {setIsLoggedIn}=useContext(tokenContext)
+const {setUserName}=useContext(tokenContext)
+const {userName} = useContext(tokenContext)   
 return (
     <div className='loginPage'>
+        <div className='registerbuttondiv'>mesh 3amel account 3ena? ekbes hoon 
         <button className='registerbutton' onClick={()=>{
             navigate("/users/register")
         }}>Sign Up</button>
+        </div>
         <img className="icon" src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' onClick={()=>
     navigate("/")}/>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -30,9 +34,11 @@ return (
     <button className='loginButton' onClick={()=>{
         axios.post("http://localhost:5000/users/login",{email,password})
         .then((response)=>{
+            console.log(response.data);
             setToken(response.data.token)
             localStorage.setItem("token",response.data.token)
             navigate("/loggedin")
+            setUserName(response.data.userName)
         })
         .catch((err)=>{
             setErrorMessage(err.message)

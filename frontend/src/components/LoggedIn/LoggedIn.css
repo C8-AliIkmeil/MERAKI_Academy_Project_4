@@ -1,0 +1,12 @@
+.loggedin{
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 2%;
+}
+.homepagebutton{
+    width: 5%;
+    float: left;
+}
+.username{
+    float: right;
+}
