@@ -5,6 +5,7 @@ import { useState,useEffect,createContext } from "react";
 import Register from "./components/Register/Register";
 import Home from "./components/HomePage/Home"
 import Login from "./components/Login/Login";
+import Backtologin from "./components/Backtologin/Backtologin";
 export const tokenContext =createContext()
 function App() {
   const [token, setToken] = useState("")
@@ -14,7 +15,8 @@ function App() {
 
     <div className="App">
       <Routes>
-      <Route path="/home" element={<Home/>}/>
+        <Route path="/backtologin" element={<Backtologin/>}/>
+      <Route path="/" element={<Home/>}/>
       <Route path="/users/register" element={<Register/>}/>
       <Route path="users/login" element={<Login/>}/>
       </Routes>

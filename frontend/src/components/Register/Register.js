@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import { Navigate, useNavigate } from 'react-router-dom'
 import "./Register.css"
-
+import Backtologin from '../Backtologin/Backtologin'
+import { Route,Router } from 'react-router-dom'
 const Register = (req,res) => {
 const navigate = useNavigate()
 const [firstName, setFirstName] = useState("")
@@ -14,7 +15,9 @@ const [location, setLocation] = useState("")
 const [successMessage, setSuccessMessage] = useState("")
 const [errorMessage, setErrorMessage] = useState("")
     return (
+        
     <div className='register'>
+        
         <div className='title'></div>
         <div className='loginbutton'> 
         Already have accout?
@@ -24,7 +27,7 @@ const [errorMessage, setErrorMessage] = useState("")
         
         </div>
     <button className='homebutton' onClick={()=>{
-        navigate("/home")
+        navigate("/")
     }}>Home Page</button>
     <br/>
     <br/>
@@ -64,27 +67,15 @@ const [errorMessage, setErrorMessage] = useState("")
         axios.post("http://localhost:5000/users/register",{firstName,lastName,email,password,age,location})
         .then((response)=>{
             setSuccessMessage(response.data.message)
-            res.status(201).json({
-                success:true,
-                message:"User Added Successfully",
-                
-            })
         })
         .catch((err)=>{
             setErrorMessage(err.message)
-            res.status(500).json({
-                success:false,
-                message:"Something went wrong kindly try again"
-            })
         })
-        {successMessage&&<div>
-            User Added Successfully
-        <button className='returntologin' onClick={()=>{
-            navigate('/users/login/')
-        }} ></button>
-        </div>}
 
     }}>Make account</button>
+        {successMessage&&<>{navigate("/backtologin")}</>}
+        {errorMessage&&<div>{errorMessage}</div>}
+        
     </div>
   )
 }
