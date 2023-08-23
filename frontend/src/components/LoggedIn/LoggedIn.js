@@ -9,6 +9,7 @@ const {userName}=useContext(tokenContext)
 const navigate = useNavigate()    
 return (
     <div className='loggedin'><h1>Khalek Bdarak SuperMarket</h1>
+        
         <div className='username'>Welcome {userName}
         <br/>
         <button className='logoutbutton' onClick={()=>{
@@ -16,6 +17,9 @@ return (
             setToken(null)
             navigate("/")
 }}>LogOut</button>
+<button onClick={()=>{
+            navigate("/addproduct")
+        }}>Add Products</button>
 </div>
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepagebutton' onClick={()=>{
         navigate("/loggedin")

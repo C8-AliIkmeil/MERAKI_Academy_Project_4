@@ -3,7 +3,7 @@
 }
 .productcard{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-right: 10%;
     padding-left: 10%;
     padding-bottom: 5%;
@@ -12,3 +12,6 @@
 /* .prodname{
     
 } */
+.addtocart{
+    width: 20%;
+}

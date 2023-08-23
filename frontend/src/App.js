@@ -7,6 +7,7 @@ import Home from "./components/HomePage/Home"
 import Login from "./components/Login/Login";
 import Backtologin from "./components/Backtologin/Backtologin";
 import LoggedIn from "./components/LoggedIn/LoggedIn";
+import Addproducts from "./components/Addproducts/Addproducts";
 export const tokenContext =createContext()
 function App() {
   const [token, setToken] = useState("")
@@ -17,6 +18,7 @@ function App() {
 
     <div className="App">
       <Routes>
+        <Route path="/addproduct" element={<Addproducts/>}/>
         <Route path="/backtologin" element={<Backtologin/>}/>
         <Route path="/loggedin" element={<LoggedIn/>}/>
       <Route path="/" element={<Home/>}/>

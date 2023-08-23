@@ -15,13 +15,14 @@ const Products = () => {
     const navigate=useNavigate()
     useEffect(()=>{
         axios
-        .get("http://localhost:5000/products/",{headers:{Authorization:`Bearer ${token}`}})
+        .get("http://localhost:5000/products/")
         .then((response)=>{
             console.log(response.data.products);
             setProductList(response.data.products)
         })
         .catch((err)=>{
             setErrorMessage("Error Happened")
+            console.log(err);
         
         })
     },[])
@@ -32,10 +33,14 @@ const Products = () => {
         {productList?<>{productList.map((prod,i)=>{
             return(<div className='productcard'>
             <img className="prodimg"src={prod.img} />
+            <img className='addtocart' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
+                
+            }}/>
             <div key="nameprod"className='prodname'>{prod.name}</div>
             <div key="priceprod"className='prodprice'>{prod.price}</div>
             </div>)
         })}</>:<>{errorMessage}</>}
+        
     </div>
   )
 }

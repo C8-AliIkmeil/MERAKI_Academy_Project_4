@@ -3,6 +3,7 @@ import "./Home.css"
 import { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Categories from '../Categories/Categories'
+import Products from '../Products/Products'
 const Home = () => {
     const navigate = useNavigate()
   return (
@@ -15,6 +16,7 @@ const Home = () => {
             navigate('/users/login')
         }}>Login</button>
         <Categories/>
+        <Products/>
     </div>
   )
 }
