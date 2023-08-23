@@ -2,6 +2,7 @@ import React,{useState,useEffect,useContext} from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { tokenContext } from '../../App'
+import "./Products.css"
 const Products = () => {
     const [name, setName] = useState("")
     const [price, setPrice] = useState("")
@@ -28,13 +29,13 @@ const Products = () => {
     <div>
         <br/>
         <br/><br/><br/><br/><br/><br/>
-        {productList&&<>{productList.map((prod,i)=>{
+        {productList?<>{productList.map((prod,i)=>{
             return(<div className='productcard'>
-            <img src='' />
+            <img className="prodimg"src={prod.img} />
             <div key="nameprod"className='prodname'>{prod.name}</div>
             <div key="priceprod"className='prodprice'>{prod.price}</div>
             </div>)
-        })}</>}
+        })}</>:<>{errorMessage}</>}
     </div>
   )
 }

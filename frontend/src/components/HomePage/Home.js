@@ -2,6 +2,7 @@ import React from 'react'
 import "./Home.css"
 import { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Categories from '../Categories/Categories'
 const Home = () => {
     const navigate = useNavigate()
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <button className='loginbutton' onClick={()=>{
             navigate('/users/login')
         }}>Login</button>
+        <Categories/>
     </div>
   )
 }

@@ -1,0 +1,14 @@
+.prodimg{
+    width: 50%;
+}
+.productcard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    /* border: 5px solid red; */
+}
+/* .prodname{
+    
+} */
