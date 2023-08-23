@@ -5,5 +5,5 @@ const {addingProducts, getAllProducts,}=require("../controllers/productsControll
 const authentication = require("../middleware/authentication")
 
 productsRouter.post("/",addingProducts)
-productsRouter.get('/',authentication,getAllProducts)
+productsRouter.get('/',getAllProducts)
 module.exports=productsRouter

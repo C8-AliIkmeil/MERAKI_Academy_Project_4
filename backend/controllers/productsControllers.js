@@ -26,7 +26,7 @@ const addingProducts = (req,res)=>{
     })
 }
 const getAllProducts = (req,res)=>{
-const userId=req.token.userId
+// const userId=req.token.userId
 console.log(req.token);
 productsModel
 .find()
@@ -36,7 +36,7 @@ productsModel
         res.status(201).json({
             success:true,
             message:"Here are all the products",
-            userId:userId,
+            // userId:userId,
             products:products
         })
     }else{
