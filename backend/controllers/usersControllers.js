@@ -46,8 +46,10 @@ const Login =(req,res)=>{
                 })
             }
             const payload= {
+                email:response.email,
+                password:response.password,
                 userId: response._id,
-                author:response.firstName,
+                firstName:response.firstName,
                 role: response.role,
                 location: response.location,
                 userName: `${response.firstName.charAt(0).toUpperCase() + response.firstName.slice(1)} ${response.lastName.charAt(0).toUpperCase() + response.lastName.slice(1)}` 

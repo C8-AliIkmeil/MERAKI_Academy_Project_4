@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 const productsModel = require ("../models/productsSchema")
+const { Login } = require("./usersControllers")
 const addingProducts = (req,res)=>{
     const {name,price,img}=req.body
     const productInfo = new productsModel({
@@ -26,6 +27,7 @@ const addingProducts = (req,res)=>{
 }
 const getAllProducts = (req,res)=>{
 const userId=req.token.userId
+console.log(req.token);
 productsModel
 .find()
 .exec()
