@@ -1,9 +1,11 @@
+const mongoose = require("mongoose")
 
 const categoriesModel = require("../models/categoriesSchema")
 const addingCategories = (req,res)=>{
-    const {name}=req.body
+    const {name,img}=req.body
     const category = new categoriesModel({
-        name
+        name,
+        img
     })
     category.save()
     .then((response)=>{
@@ -21,4 +23,22 @@ const addingCategories = (req,res)=>{
         })
     })
 }
-module.exports={addingCategories}
+const getAllCategories = (req,res)=>{
+    categoriesModel
+    .find()
+    .exec()
+    .then((categ)=>{
+        res.status(200).json({
+            success:true,
+            message:"Here are the categories",
+            categories:categ
+        })
+    })
+    .catch((err)=>{
+        res.status(500).json({
+            succes:false,
+            message:"SomeThing went wrong kindly try again"
+        })
+    })
+}
+module.exports={addingCategories,getAllCategories}
