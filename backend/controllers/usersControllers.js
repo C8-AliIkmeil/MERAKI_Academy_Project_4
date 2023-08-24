@@ -62,7 +62,8 @@ const Login =(req,res)=>{
                 success:true,
                 message:"Valid login credentials",
                 token: token,
-                userName: `${response.firstName.charAt(0).toUpperCase() + response.firstName.slice(1)} ${response.lastName.charAt(0).toUpperCase() + response.lastName.slice(1)}`
+                userName: `${response.firstName.charAt(0).toUpperCase() + response.firstName.slice(1)} ${response.lastName.charAt(0).toUpperCase() + response.lastName.slice(1)}`,
+                userId: response._id
             })
         }catch(error){
             throw new Error(error.message)

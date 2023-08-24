@@ -18,7 +18,7 @@ const addProductsToCart =(req,res)=>{
     .catch((err)=>{
         res.status(500).json({
             success:false,
-            message:"Something went wrong kindly to try to add your Item again"
+            message:"Something went wrong kindly try to add your Item again"
         })
     })
 }
