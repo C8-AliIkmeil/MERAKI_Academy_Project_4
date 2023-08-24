@@ -63,7 +63,9 @@ const [errorMessage, setErrorMessage] = useState("")
     <input type="text" placeholder='Location' onChange={(e)=>{setLocation(e.target.value)}}/>
     <br/>
     <br/>
+    
     <button className='addaccount' onClick={()=>{
+
         axios.post("http://localhost:5000/users/register",{firstName,lastName,email,password,age,location})
         .then((response)=>{
             setSuccessMessage(response.data.message)

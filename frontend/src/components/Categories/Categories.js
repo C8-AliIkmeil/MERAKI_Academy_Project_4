@@ -20,14 +20,18 @@ const Categories = () => {
   })
 
     return (
+
     <div className='categoriespage'>
-        {categoryList?<div className='categories'>
+        <br/>
+        <br/>
+        {categoryList?<>
             {categoryList.map((categ,i)=>{
-                return (<div className='categorycard'>{categ.name}
+                return (<div className='categorycard'>
                 <img className='categoryimg' src={categ.img}/>
+                    <div>{categ.name}</div>
                 </div>)
             })}
-        </div>:<>{errorMessage}</>}
+        </>:<>{errorMessage}</>}
     </div>
   )
 }

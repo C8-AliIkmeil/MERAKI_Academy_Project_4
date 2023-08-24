@@ -9,8 +9,12 @@ const Products = () => {
     const [img, setImg] = useState("")
     const [category, setCategory] = useState("")
     const [productList, setProductList] = useState("")
+    // const [userId, setUserId] = useState("")
+    const [productId, setProductId] = useState("")
     const {token}=useContext(tokenContext)
     const {setToken}=useContext(tokenContext)
+    const {userId}=useContext(tokenContext)
+    const {setUserId}=useContext(tokenContext)
     const [errorMessage, setErrorMessage] = useState("")
     const navigate=useNavigate()
     useEffect(()=>{
@@ -34,7 +38,18 @@ const Products = () => {
             return(<div className='productcard'>
             <img className="prodimg"src={prod.img} />
             <img className='addtocart' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
-                
+                if (!token){
+                    navigate("/users/login")
+                }else{
+                    setProductId(prod._id)
+                    axios.post("http://localhost:5000/cart/",{userId,productId})
+                    .then((response)=>{
+                        console.log(response.data);
+                    })
+                    .catch((err)=>{
+                        console.log(err);
+                    })
+                }
             }}/>
             <div key="nameprod"className='prodname'>{prod.name}</div>
             <div key="priceprod"className='prodprice'>{prod.price}</div>

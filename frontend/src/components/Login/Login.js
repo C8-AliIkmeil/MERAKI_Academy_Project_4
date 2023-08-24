@@ -14,6 +14,8 @@ const Login = () => {
   const { setIsLoggedIn } = useContext(tokenContext);
   const { setUserName } = useContext(tokenContext);
   const { userName } = useContext(tokenContext);
+  const {userId} = useContext(tokenContext)
+  const {setUserId}=useContext(tokenContext)
   return (
     <div className="loginPage">
       <div className="registerbuttondiv">
@@ -74,6 +76,7 @@ const Login = () => {
               localStorage.setItem("token", response.data.token);
               navigate("/loggedin");
               setUserName(response.data.userName);
+              setUserId(response.data.userId)
             })
             .catch((err) => {
               setErrorMessage(err.message);

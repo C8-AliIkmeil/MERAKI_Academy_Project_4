@@ -15,3 +15,6 @@
 .addtocart{
     width: 20%;
 }
+.addtocart{
+    cursor: pointer;
+}

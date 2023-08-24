@@ -24,6 +24,9 @@ return (
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepagebutton' onClick={()=>{
         navigate("/loggedin")
         }}/>
+        <img className='yourcart' src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg" onClick={()=>{
+            navigate("/cart")
+        }}/>
         <Products/>
     </div>
   )
