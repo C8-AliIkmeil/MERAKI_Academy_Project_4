@@ -1,0 +1,10 @@
+.productid{
+    color: red;
+}
+.productimg{
+    width: 20%;
+}
+.cartproductcard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

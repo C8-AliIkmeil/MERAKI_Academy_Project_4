@@ -11,7 +11,7 @@ import Addproducts from "./components/Addproducts/Addproducts";
 import Cart from "./components/Cart/Cart";
 export const tokenContext =createContext()
 function App() {
-  const [token, setToken] = useState("")
+  const [token, setToken] = useState(localStorage.getItem("token")|| "")
   const [isLoggedIn, setIsLoggedIn] = useState("")
   const [userName, setUserName] = useState("")
   const [userId, setUserId] = useState("")

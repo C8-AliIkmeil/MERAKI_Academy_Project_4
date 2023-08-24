@@ -41,8 +41,8 @@ const Products = () => {
                 if (!token){
                     navigate("/users/login")
                 }else{
-                    setProductId(prod._id)
-                    axios.post("http://localhost:5000/cart/",{userId,productId})
+                    // setProductId(prod._id)
+                    axios.post("http://localhost:5000/cart/",{userId,productId:prod._id})
                     .then((response)=>{
                         console.log(response.data);
                     })
