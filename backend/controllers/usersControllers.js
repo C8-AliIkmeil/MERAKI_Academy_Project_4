@@ -55,7 +55,7 @@ const Login =(req,res)=>{
                 userName: `${response.firstName.charAt(0).toUpperCase() + response.firstName.slice(1)} ${response.lastName.charAt(0).toUpperCase() + response.lastName.slice(1)}` 
             }
             const options = {
-                expiresIn:"60m"
+                expiresIn:"24h"
             }
             const token = jwt.sign(payload,process.env.SECRET,options)
             res.status(200).json({
