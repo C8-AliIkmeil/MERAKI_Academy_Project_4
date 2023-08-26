@@ -22,9 +22,10 @@ const Cart = () => {
   },[])
     return (
     <div>
-        <button className='homepage' onClick={()=>{
+        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepage' onClick={()=>{
             navigate("/loggedin")
-        }}>Back to home page</button>
+        }}/>
+        <br/><br/><br/><br/><br/><br/><br/>
         {cartList?<>
         <div className='cartcard'>
             
@@ -38,8 +39,10 @@ const Cart = () => {
                         // console.log(prod.productId._id);
                         axios.delete(`http://localhost:5000/cart/${prod._id}`,{headers:{Authorization:`Bearer ${token}`}})
                         .then((response)=>{
-                            console.log(response);
-                            // setDeletedItem("deleted")
+                            const filtered = cartList.filter((elem,i)=>{
+                                return elem._id !== prod._id
+                            })
+                            setCartList(filtered)
                             // setCartList(cartList)
                         })
                         .catch((err)=>{

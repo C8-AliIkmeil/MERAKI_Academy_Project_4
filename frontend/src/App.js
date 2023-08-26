@@ -13,8 +13,8 @@ export const tokenContext =createContext()
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token")|| "")
   const [isLoggedIn, setIsLoggedIn] = useState("")
-  const [userName, setUserName] = useState("")
-  const [userId, setUserId] = useState("")
+  const [userName, setUserName] = useState(localStorage.getItem("userName")|| "")
+  const [userId, setUserId] = useState(localStorage.getItem("userId")|| "")
   return (
     <tokenContext.Provider value={{token,setToken,isLoggedIn,setIsLoggedIn,userName,setUserName,userId,setUserId}}>
 

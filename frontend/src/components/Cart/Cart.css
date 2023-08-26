@@ -8,3 +8,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.homepage{
+    width: 5%;
+    float: left;
+    float: top
+    ;
+}
