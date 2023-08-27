@@ -41,4 +41,23 @@ const getAllCategories = (req,res)=>{
         })
     })
 }
-module.exports={addingCategories,getAllCategories}
+const getCategoryById = (req,res)=>{
+    // console.log(req.params.id);
+    let id = req.params.id
+    categoriesModel.findById(id)
+    .exec()
+    .then((response)=>{
+        res.status(200).json({
+            success:true,
+            message:"here is the category",
+            categories: response
+        })
+    })
+    .catch((err)=>{
+        res.status(500).json({
+            success:false,
+            message:"Server error"
+        })
+    })
+}
+module.exports={addingCategories,getAllCategories,getCategoryById}

@@ -2,11 +2,12 @@ const mongoose = require("mongoose")
 const productsModel = require ("../models/productsSchema")
 const { Login } = require("./usersControllers")
 const addingProducts = (req,res)=>{
-    const {name,price,img}=req.body
+    const {name,price,img,category}=req.body
     const productInfo = new productsModel({
         name,
         price,
-        img
+        img,
+        category
     })
     productInfo
     .save()
@@ -57,5 +58,23 @@ productsModel
 
 }
 
+const getProductByCategId = (req,res)=>{
+    let id = req.params.id
+    productsModel.find({category:id})
+    .exec()
+    .then((response)=>{
+        res.status(200).json({
+            success:true,
+            message:"here is the products of this category",
+            categories: response
+        })
+    })
+    .catch((err)=>{
+        res.status(500).json({
+            success:false,
+            message:"Server error"
+        })
+    })
+}
 
-module.exports={addingProducts,getAllProducts}
+module.exports={addingProducts,getAllProducts,getProductByCategId}
