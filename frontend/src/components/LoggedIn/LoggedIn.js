@@ -3,6 +3,7 @@ import "./LoggedIn.css"
 import { useNavigate } from 'react-router-dom'
 import { tokenContext } from '../../App'
 import Products from '../Products/Products'
+import Categories from '../Categories/Categories'
 const LoggedIn = () => {
 const {setToken}=useContext(tokenContext)
 const {userName}=useContext(tokenContext)
@@ -27,6 +28,7 @@ return (
         <img className='yourcart' src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg" onClick={()=>{
             navigate("/cart")
         }}/>
+        <Categories/>
         <Products/>
     </div>
   )

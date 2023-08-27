@@ -17,7 +17,7 @@ const Cart = () => {
         console.log(response.data.products);
     })
     .catch((err)=>{
-        console.log(err);
+        setErrorMessage(err.message)
     })
   },[])
     return (

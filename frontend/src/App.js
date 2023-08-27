@@ -9,17 +9,20 @@ import Backtologin from "./components/Backtologin/Backtologin";
 import LoggedIn from "./components/LoggedIn/LoggedIn";
 import Addproducts from "./components/Addproducts/Addproducts";
 import Cart from "./components/Cart/Cart";
+import Categorycomponent from "./components/CategoryComponent/Categorycomponent";
 export const tokenContext =createContext()
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token")|| "")
   const [isLoggedIn, setIsLoggedIn] = useState("")
   const [userName, setUserName] = useState(localStorage.getItem("userName")|| "")
   const [userId, setUserId] = useState(localStorage.getItem("userId")|| "")
+  const [productsCateg, setProductsCateg] = useState("")
   return (
-    <tokenContext.Provider value={{token,setToken,isLoggedIn,setIsLoggedIn,userName,setUserName,userId,setUserId}}>
+    <tokenContext.Provider value={{token,setToken,isLoggedIn,setIsLoggedIn,userName,setUserName,userId,setUserId,productsCateg,setProductsCateg}}>
 
     <div className="App">
       <Routes>
+        <Route path="/categorycomponent" element={<Categorycomponent/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/addproduct" element={<Addproducts/>}/>
         <Route path="/backtologin" element={<Backtologin/>}/>
