@@ -25,7 +25,7 @@ const addProductsToCart =(req,res)=>{
 const getAllCartProducts = (req,res)=>{
     // console.log(req.token);
     const userId = req.token.userId
-    cartModel.find({userId:userId}).populate("productId").populate("userId")
+    cartModel.find({userId:userId}).populate("productId")
     .exec().then((response)=>{
         res.status(201).json({
             success:true,
