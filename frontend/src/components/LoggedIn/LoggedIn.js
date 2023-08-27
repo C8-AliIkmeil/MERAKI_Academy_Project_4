@@ -5,9 +5,9 @@ import { tokenContext } from '../../App'
 import Products from '../Products/Products'
 import Categories from '../Categories/Categories'
 const LoggedIn = () => {
-const {setToken}=useContext(tokenContext)
-const {userName}=useContext(tokenContext)
+const {setToken,userName}=useContext(tokenContext)
 const navigate = useNavigate()    
+
 return (
     <div className='loggedin'><h1>Khalek Bdarak SuperMarket</h1>
         

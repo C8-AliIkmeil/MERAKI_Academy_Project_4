@@ -6,11 +6,15 @@
 }
 .cartproductcard{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .homepage{
     width: 5%;
     float: left;
     float: top
     ;
+}
+.deleteproduct{
+    width: 20%;
+    cursor: pointer;
 }
