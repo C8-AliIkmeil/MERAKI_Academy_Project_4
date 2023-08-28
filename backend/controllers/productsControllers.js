@@ -58,6 +58,23 @@ productsModel
 
 }
 
+const getProductBySearch = (req,res)=>{
+    // console.log(req.query.name);
+    let search = req.query.name
+    // console.log(search);
+    const newSearch = new RegExp(search,"gi")
+    // let search = req.query
+    productsModel.find({name:{$regex:newSearch}})
+    .then((response)=>{
+        // console.log(response);
+        res.json(response)
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+}
+
+
 const getProductByCategId = (req,res)=>{
     let id = req.params.id
     productsModel.find({category:id})
@@ -77,4 +94,4 @@ const getProductByCategId = (req,res)=>{
     })
 }
 
-module.exports={addingProducts,getAllProducts,getProductByCategId}
+module.exports={addingProducts,getAllProducts,getProductByCategId,getProductBySearch}
