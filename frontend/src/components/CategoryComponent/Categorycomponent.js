@@ -8,7 +8,7 @@ const Categorycomponent = () => {
   const navigate = useNavigate()
   return (
     
-    <div>
+    <div className='categorycomponent'>
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepagebutton' onClick={()=>{
             
             if (token){
@@ -18,9 +18,9 @@ const Categorycomponent = () => {
             }
             
         }}/>
-        
+        <div className='productCard'>
         {productsCateg.map((product,i)=>{
-            return(<div className='productCard'>
+            return(<div className='productinfo'>
             
                 <img className='productImg' src={product.img}/>
                 <div className='productName'>{product.name}</div>
@@ -31,7 +31,7 @@ const Categorycomponent = () => {
                 }else{
                     // setProductId(prod._id)
                     axios.post("http://localhost:5000/cart/",{userId,productId:product._id})
-                    .then((response)=>{
+                    .then((response)=>{ 
                         // console.log(response.data);
                     })
                     .catch((err)=>{
@@ -41,6 +41,7 @@ const Categorycomponent = () => {
             }}/>
             </div>)
         })}
+        </div>
         </div>
   )
 }

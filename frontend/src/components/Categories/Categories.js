@@ -25,9 +25,9 @@ const Categories = () => {
     <div className='categoriespage'>
         <br/>
         <br/>
-        {categoryList?<>
+        {categoryList?<div className='categorycard'>
             {categoryList.map((categ,i)=>{
-                return (<div className='categorycard'>
+                return (<div className='categoryinfo'>
                 <img className='categoryimg' src={categ.img}
                 onClick={()=>{
                   axios.get(`http://localhost:5000/products/${categ._id}`)
@@ -44,7 +44,7 @@ const Categories = () => {
                     <div>{categ.name}</div>
                 </div>)
             })}
-        </>:<>{errorMessage}</>}
+        </div>:<>{errorMessage}</>}
     </div>
   )
 

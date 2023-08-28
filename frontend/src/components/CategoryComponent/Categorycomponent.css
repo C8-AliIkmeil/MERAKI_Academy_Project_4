@@ -1,5 +1,5 @@
 .productImg{
-    width: 5%;
+    width: 50%;
 }
 .homepagebutton{
     width: 5%;
@@ -8,6 +8,19 @@
 }
 .addtocart1{
     width: 5%;
+    cursor: pointer;
 }
 .yourcart{width: 5%;
 float: left;}
+/* .productCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} */
+.categorycomponent{
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+}
+.productCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

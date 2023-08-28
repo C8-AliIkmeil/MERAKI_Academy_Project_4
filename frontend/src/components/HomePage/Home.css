@@ -1,7 +1,17 @@
 .Home{
-    background-color: red;
+    /* background-color: red; */
 }
 .signupbutton{
     float:right;
     cursor: pointer;
+    border-radius: 20%;
+    width: 7%;
+    background-color: blue;
+}
+.loginbutton{
+    border-radius: 20%;
+    width: 7%;
+    background-color: greenyellow;
+    cursor: pointer;
+    
 }

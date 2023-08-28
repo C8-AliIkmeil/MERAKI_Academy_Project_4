@@ -21,7 +21,6 @@ return (
 <button className="addporductsbutton"onClick={()=>{
             navigate("/addproduct")
         }}>Add Products</button>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
         <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepagebutton' onClick={()=>{
         navigate("/loggedin")

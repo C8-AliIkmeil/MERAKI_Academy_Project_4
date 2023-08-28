@@ -1,4 +1,12 @@
 .categoryimg{
-    width: 20%;
+    width: 120%;
     cursor: pointer;
+}
+.categorycard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    ;
+}
+.categoryinfo{
+    padding: 10%;
 }
