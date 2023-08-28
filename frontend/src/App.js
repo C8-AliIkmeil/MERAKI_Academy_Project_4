@@ -10,6 +10,7 @@ import LoggedIn from "./components/LoggedIn/LoggedIn";
 import Addproducts from "./components/Addproducts/Addproducts";
 import Cart from "./components/Cart/Cart";
 import Categorycomponent from "./components/CategoryComponent/Categorycomponent";
+import Payment from "./components/Payment/Payment";
 export const tokenContext =createContext()
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token")|| "")
@@ -22,6 +23,7 @@ function App() {
 
     <div className="App">
       <Routes>
+        <Route path="/payment" element={<Payment/>}/>
         <Route path="/categorycomponent" element={<Categorycomponent/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/addproduct" element={<Addproducts/>}/>

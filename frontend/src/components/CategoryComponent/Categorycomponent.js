@@ -32,7 +32,7 @@ const Categorycomponent = () => {
                     // setProductId(prod._id)
                     axios.post("http://localhost:5000/cart/",{userId,productId:product._id})
                     .then((response)=>{
-                        console.log(response.data);
+                        // console.log(response.data);
                     })
                     .catch((err)=>{
                         console.log(err);

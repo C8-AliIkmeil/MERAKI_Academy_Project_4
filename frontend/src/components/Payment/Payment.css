@@ -1,0 +1,20 @@
+.homepagebutton{
+    width: 5%;
+    float: left;
+    cursor: pointer;
+}
+.paymentcard{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.cardnumber{
+    padding: 2%;
+
+}
+.Pay{
+    padding: 1%;
+    cursor: pointer;
+}

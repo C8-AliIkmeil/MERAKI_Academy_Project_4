@@ -11,10 +11,27 @@
 .homepage{
     width: 5%;
     float: left;
-    float: top
-    ;
+    float: top;
+    cursor: pointer;
 }
 .deleteproduct{
     width: 20%;
     cursor: pointer;
 }
+.checkoutbutton{
+    width: 20%;
+    border-radius: 10%;
+    padding-left: 10%;
+    cursor: pointer;
+    ;
+}
+.visa{
+    width: 30%;
+    float: right;
+}
+.price{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* .availablepaymentmethods{
+} */

@@ -4,6 +4,7 @@
 .homepagebutton{
     width: 5%;
     float: left;
+    cursor: pointer;
 }
 .addtocart1{
     width: 5%;

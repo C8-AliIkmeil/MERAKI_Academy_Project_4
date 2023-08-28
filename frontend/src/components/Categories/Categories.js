@@ -33,7 +33,7 @@ const Categories = () => {
                   axios.get(`http://localhost:5000/products/${categ._id}`)
                   .then((response)=>{
                     // setCatego(response.data.category)
-                    console.log(response.data);
+                    // console.log(response.data);
                     setProductsCateg(response.data.categories)
                     navigate("/categorycomponent")
                   })

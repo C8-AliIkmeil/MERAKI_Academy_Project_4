@@ -12,18 +12,24 @@ const Cart = () => {
     const [deleteErrorMessage, setDeleteErrorMessage] = useState("")
     const [totalPrice, setTotalPrice] = useState(0)
   const navigate = useNavigate()
+  const totalcartfunction = (thecart)=>{
+    console.log(thecart);
+    const totalcart =  thecart.reduce(function (accumulator, element, index) {
+        // return an expression that would modify the accumulator
+        return (Math.ceil((accumulator + element.productId.price)*100))/100;
+        // you can specify the starting value of the accumulator
+      }, 0);
+    // console.log(totalcart);
+    setTotalPrice(totalcart)
+  }
+
+
   useEffect(()=>{
     axios.get("http://localhost:5000/cart/",{headers:{Authorization:`Bearer ${token}`}})
     .then((response)=>{
         setCartList(response.data.products);
-        console.log(response.data.products);
-        const totalcart =  response.data.products.reduce(function (accumulator, element, index) {
-            // return an expression that would modify the accumulator
-            return accumulator + element.productId.price;
-            // you can specify the starting value of the accumulator
-          }, 0);
-        console.log(totalcart);
-        setTotalPrice(totalcart)
+        // console.log(response.data.products);
+        totalcartfunction(response.data.products)
     })
     .catch((err)=>{
         setErrorMessage(err.message)
@@ -41,7 +47,7 @@ const Cart = () => {
             
             
             {cartList.map((prod,i)=>{
-                console.log(prod);
+                // console.log(prod);
                 return(<div className='cartproductcard'>
                     <img src={prod.productId.img} className='productimg' />
                     <div className='productid'>{prod.productId.name}</div>
@@ -57,6 +63,7 @@ const Cart = () => {
                                 return elem._id !== prod._id
                             })
                             setCartList(filtered)
+                            totalcartfunction(filtered)
                             // setCartList(cartList)
                         })
                         .catch((err)=>{
@@ -70,7 +77,16 @@ const Cart = () => {
                     
                 </div>)
             })}
-            <>total price : {totalPrice}</>
+            <div className='price'>
+            <div>total price : {totalPrice}</div>
+            <img src='https://m.media-amazon.com/images/I/51WfA1vXkmL.jpg' className='checkoutbutton' onClick={()=>{
+                navigate("/payment")
+            }}/>
+            <div className='availablepaymentmethods'>
+            Available Payment Methods
+            <img src='https://i.ytimg.com/vi/i09C02151PI/maxresdefault.jpg' className='visa'/>
+            </div>
+            </div>
         </div>
         </>:<>{errorMessage}</>}
     </div>

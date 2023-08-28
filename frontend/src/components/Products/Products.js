@@ -21,7 +21,7 @@ const Products = () => {
         axios
         .get("http://localhost:5000/products/")
         .then((response)=>{
-            console.log(response.data.products);
+            // console.log(response.data.products);
             setProductList(response.data.products)
         })
         .catch((err)=>{
@@ -44,7 +44,7 @@ const Products = () => {
                     // setProductId(prod._id)
                     axios.post("http://localhost:5000/cart/",{userId,productId:prod._id})
                     .then((response)=>{
-                        console.log(response.data);
+                        // console.log(response.data);
                     })
                     .catch((err)=>{
                         console.log(err);
