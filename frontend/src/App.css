@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+.logo{
+  width: 100%;
+}
+.navBar{
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+}

@@ -1,17 +1,32 @@
-.Home{
+.navBar{
     /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1fr 11fr 1fr 1fr 1fr 1fr;
 }
 .signupbutton{
     float:right;
     cursor: pointer;
     border-radius: 20%;
-    width: 7%;
+    width: 100%;
     background-color: blue;
+    height: 50%;
 }
 .loginbutton{
     border-radius: 20%;
-    width: 7%;
+    width: 100%;
     background-color: greenyellow;
     cursor: pointer;
-    
+    height: 50%;
+
+}
+.search{
+    height: 50%;
+}
+.searchButton{
+    width: 50%;
+    border-radius: 20%;
+
+}
+.logo{
+    border-radius: 20%  ;
 }

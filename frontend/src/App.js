@@ -19,8 +19,10 @@ function App() {
   const [userName, setUserName] = useState(localStorage.getItem("userName")|| "")
   const [userId, setUserId] = useState(localStorage.getItem("userId")|| "")
   const [productsCateg, setProductsCateg] = useState("")
+  const [search, setSearch] = useState("")
+  const [searchResults, setSearchResults] = useState("")
   return (
-    <tokenContext.Provider value={{token,setToken,isLoggedIn,setIsLoggedIn,userName,setUserName,userId,setUserId,productsCateg,setProductsCateg}}>
+    <tokenContext.Provider value={{token,setToken,isLoggedIn,setIsLoggedIn,userName,setUserName,userId,setUserId,productsCateg,setProductsCateg,search,setSearch}}>
 
     <div className="App">
       <Routes>

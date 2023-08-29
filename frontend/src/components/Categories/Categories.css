@@ -1,6 +1,7 @@
 .categoryimg{
     width: 120%;
     cursor: pointer;
+     border-radius: 20%;
 }
 .categorycard{
     display: grid;

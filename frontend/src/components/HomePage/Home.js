@@ -1,31 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Home.css"
 import { useState,useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import Categories from '../Categories/Categories'
 import Products from '../Products/Products'
 import axios from 'axios'
+import { tokenContext } from '../../App'
 const Home = () => {
     const navigate = useNavigate()
-    const [search, setSearch] = useState('')
-    const [searchResuls, setSearchResuls] = useState("")
+    const [search, setSearch] = useState("")
     return (
     
     <div className='Home'>
-        <h1>Khalek Bdarak SuperMarket</h1>
-        <input type='search' placeholder='Search' className='search' onChange={(e)=>{
-        navigate("/search")
+        <div className="navBar">
+      <img src="https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg" className="logo"/>
+      <h1>Khalek Bdarak SuperMarket</h1>
+        <img className='searchButton' src='https://img.freepik.com/premium-vector/search-icon-magnifying-glass-symbol-outline-icon_543062-139.jpg' onClick={()=>{
+          navigate("/search")
         }}/>
-        {searchResuls &&<>{searchResuls.map((elem,i)=>{
-          console.log(searchResuls);
-          return (<>{elem.name}</>)
-        })}</>}
         <button className="signupbutton" onClick={()=>{
-            navigate("/users/register")
+          navigate("/users/register")
         }}>Sign Up</button>
         <button className='loginbutton' onClick={()=>{
-            navigate('/users/login')
+          navigate('/users/login')
         }}>Login</button>
+        </div>
 
         <Categories/>
         <Products/>

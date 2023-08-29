@@ -1,0 +1,17 @@
+.productimage{
+    width: 20%;
+}
+.searchCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.signupbutton{
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 2fr 8fr 1fr 1fr;
+}
+.homepage{
+    width: 20%;
+    padding: 20%;
+}

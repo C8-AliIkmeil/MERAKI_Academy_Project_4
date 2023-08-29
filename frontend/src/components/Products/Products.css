@@ -1,5 +1,6 @@
 .prodimg{
     width: 50%;
+    border-radius: 20%;
 }
 .productcard{
     display: grid;
@@ -14,6 +15,7 @@
 } */
 .addtocart{
 width: 30%;
+border-radius: 20%;
 }
 .addtocart{
     cursor: pointer;
