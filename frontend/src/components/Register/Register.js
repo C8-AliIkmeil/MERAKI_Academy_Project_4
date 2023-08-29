@@ -19,13 +19,7 @@ const [errorMessage, setErrorMessage] = useState("")
     <div className='register'>
         
         <div className='title'></div>
-        <div className='loginbutton'> 
-        Already have accout?
-        <button onClick={()=>{
-            navigate("/users/login")
-        }}>Login</button>
         
-        </div>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png" className='homebutton' onClick={()=>{
         navigate("/")
     }}/>
@@ -65,18 +59,24 @@ const [errorMessage, setErrorMessage] = useState("")
     <br/>
     
     <button className='addaccount' onClick={()=>{
-
+        
         axios.post("http://localhost:5000/users/register",{firstName,lastName,email,password,age,location})
         .then((response)=>{
             setSuccessMessage(response.data.message)
         })
         .catch((err)=>{
-            setErrorMessage(err.message)
+            setErrorMessage("This email is already exist")
         })
 
     }}>Make account</button>
         {successMessage&&<>{navigate("/backtologin")}</>}
         {errorMessage&&<div>{errorMessage}</div>}
+        <br/><br/><br/>
+        Already have accout?
+        <br/>
+        <button className='loginbuttonregister' onClick={()=>{
+            navigate("/users/login")
+        }}>Login</button>
         
     </div>
   )

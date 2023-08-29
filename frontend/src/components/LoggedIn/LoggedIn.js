@@ -9,27 +9,38 @@ const {setToken,userName}=useContext(tokenContext)
 const navigate = useNavigate()    
 
 return (
-    <div className='loggedin'><h1>Khalek Bdarak SuperMarket</h1>
-        
-        <div className='username'>Welcome {userName}
-        <br/>
+    <div className='loggedin'>
+        <div className='navBarloggedin'>
+        <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepagebuttonloggedin' onClick={()=>{
+        navigate("/loggedin")
+        }}/>
+    <img className='yourcartloggedin' src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg" onClick={()=>{
+        navigate("/cart")
+    }}/>
+        <h1>Khalek Bdarak SuperMarket</h1>
+        <div className='box'>
+
+        <div className='username'>Welcome {userName}</div>
+        {/* <br/> */}
+        <div>
+
+        <img className='sb' src='https://img.freepik.com/premium-vector/search-icon-magnifying-glass-symbol-outline-icon_543062-139.jpg' onClick={()=>{
+            navigate("/search")
+        }}/>
         <button className='logoutbutton' onClick={()=>{
             localStorage.clear()
             setToken(null)
             navigate("/")
-}}>LogOut</button>
+        }}>LogOut</button>
 <button className="addporductsbutton"onClick={()=>{
-            navigate("/addproduct")
-        }}>Add Products</button>
+    navigate("/addproduct")
+}}>Add Products</button>
 </div>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepagebutton' onClick={()=>{
-        navigate("/loggedin")
-        }}/>
-        <img className='yourcart' src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg" onClick={()=>{
-            navigate("/cart")
-        }}/>
+</div>
+        
+        </div>
         <Categories/>
-        <Products/>
+        {/* <Products/> */}
     </div>
   )
 }

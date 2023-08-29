@@ -31,7 +31,7 @@ const Login = () => {
       </div>
       <img
         className="icon"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png"
+        src="https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg"
         onClick={() => navigate("/")}
       />
       <br />
@@ -66,7 +66,7 @@ const Login = () => {
       <br />
       <br />
       <button
-        className="loginButton"
+        className="loginButtonlogin"
         onClick={() => {
           axios
             .post("http://localhost:5000/users/login", { email, password })

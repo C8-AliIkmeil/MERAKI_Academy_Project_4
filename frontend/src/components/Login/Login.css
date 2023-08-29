@@ -5,9 +5,29 @@
 }
 .registerbuttondiv{
     float: right;
+    
 }
 .icon{
     width: 5%;
     float: left;
+    border-radius: 20%;
+    cursor: pointer;
     
+}
+
+.loginButtonlogin
+{border-radius: 20%;
+    width: 10%;
+    background-color: blue;
+    cursor: pointer; 
+     /* height: 50%; */
+     color: greenyellow;
+      }
+.registerbutton{
+    border-radius: 20%;
+    width: 30%;
+    background-color: blue;
+    cursor: pointer; 
+     /* height: 50%; */
+     color: greenyellow;
 }

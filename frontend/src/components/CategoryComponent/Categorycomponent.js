@@ -9,7 +9,7 @@ const Categorycomponent = () => {
   return (
     
     <div className='categorycomponent'>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepagebutton' onClick={()=>{
+        <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepagebuttoncategories' onClick={()=>{
             
             if (token){
                 navigate("/loggedin")

@@ -1,14 +1,17 @@
 .productImg{
     width: 50%;
+    border-radius: 20%;
 }
-.homepagebutton{
+.homepagebuttoncategories{
     width: 5%;
     float: left;
     cursor: pointer;
+    border-radius: 20%;
 }
 .addtocart1{
-    width: 5%;
+    width: 10%;
     cursor: pointer;
+    border-radius: 20%;
 }
 .yourcart{width: 5%;
 float: left;}

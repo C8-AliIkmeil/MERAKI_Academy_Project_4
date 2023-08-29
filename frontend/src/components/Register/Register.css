@@ -6,7 +6,23 @@
 .homebutton{
     float: left;
     width: 5%;
+    cursor: pointer;
 }
-.loginbutton{
-    float: right;
+.loginbuttonregister{
+     /* float: right;  */
+     border-radius: 20%;
+    width: 10%;
+    background-color: blue;
+    cursor: pointer; 
+     /* height: 50%; */
+     color: greenyellow;
+      
+}
+.addaccount{
+    border-radius: 20%;
+    width: 10%;
+    background-color: blue;
+    cursor: pointer; 
+     /* height: 50%; */
+     color: greenyellow;
 }

@@ -1,25 +1,49 @@
+
 .loggedin{
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 2%;
 }
-.homepagebutton{
-    width: 5%;
+.homepagebuttonloggedin{
+    width: 40%;
     float: left;
     cursor: pointer;
 }
 .username{
     float: right;
 }
-.yourcart{
-    width: 5%;
+.yourcartloggedin{
+    width: 40%;
     float: left;
     padding-left: 2%;
     cursor: pointer;
 }
 .addporductsbutton{
     cursor: pointer;
+    border-radius: 20%;
+    width: 30%;
+    background-color: blue;
+    cursor: pointer; 
+     /* height: 50%; */
+     color: greenyellow;
 }
 .logoutbutton{
     cursor: pointer;
+    border-radius: 20%;
+    width: 30%;
+    background-color: blue;
+     /* height: 50%; */
+     color: greenyellow;
+}
+.sb{
+    width: 10%;
+    cursor: pointer;
+}
+.navBarloggedin{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 2fr ;
+}
+.box{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
 }

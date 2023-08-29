@@ -12,6 +12,8 @@ const Home = () => {
     return (
     
     <div className='Home'>
+        {/* <div className='navBarrows'> */}
+        {/* <div></div> */}
         <div className="navBar">
       <img src="https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg" className="logo"/>
       <h1>Khalek Bdarak SuperMarket</h1>
@@ -25,9 +27,13 @@ const Home = () => {
           navigate('/users/login')
         }}>Login</button>
         </div>
+        {/* <div></div> */}
+        {/* </div> */}
+        <div className='categories'>
 
         <Categories/>
-        <Products/>
+        </div>
+        {/* <Products/> */}
     </div>
   )
 }
