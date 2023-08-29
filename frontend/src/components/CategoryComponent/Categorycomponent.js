@@ -2,7 +2,7 @@ import React,{useState,useEffect,useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import "./Categorycomponent.css"
-import { tokenContext } from '../../App'
+import { tokenContext } from '../../App' 
 const Categorycomponent = () => {
   const {productsCateg,token,userId,productId,userName} = useContext(tokenContext)  
   const navigate = useNavigate()
@@ -25,7 +25,17 @@ const Categorycomponent = () => {
             navigate("/cart")
         }}/>
         <h1>Khalek Bdarak SuperMarket</h1>
-        <div>{userName}</div>
+        <div>{token?<>
+        {userName}
+        </>:<>
+        <button className="signupbutton" onClick={()=>{
+          navigate("/users/register")
+        }}>Sign Up</button>
+        <button className='loginbutton' onClick={()=>{
+          navigate('/users/login')
+        }}>Login</button>
+        
+        </>}</div>
         </div>
         <div className='productCard'>
         {productsCateg.map((product,i)=>{

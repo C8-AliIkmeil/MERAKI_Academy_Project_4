@@ -1,9 +1,9 @@
 .productImg{
-    width: 50%;
+    width: 40%;
     border-radius: 20%;
 }
 .homepagebuttoncategories{
-    width: 40%;
+    width: 50%;
     float: left;
     cursor: pointer;
     border-radius: 20%;
@@ -13,7 +13,8 @@
     cursor: pointer;
     border-radius: 20%;
 }
-.yourcart{width: 5%;
+.yourcart{
+    width: 5%;
 float: left;}
 /* .productCard{
     display: grid;
@@ -28,14 +29,14 @@ float: left;}
     grid-template-columns: 1fr 1fr 1fr;
 }
 .yourcartcategories{
-    width: 10%;
+    width: 50%;
     float: left;
-    padding-left: 2%;
+    /* padding-left: 2%; */
     cursor: pointer;
     border-radius: 20%;
     border: 1px solid greenyellow;
 }
 .navbarcategories{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 5fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 7fr 1fr;
 }
