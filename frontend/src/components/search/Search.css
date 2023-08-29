@@ -5,11 +5,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.signupbutton{
-}
 .navbar{
     display: grid;
-    grid-template-columns: 1fr 2fr 8fr 1fr 1fr 1fr;
+    grid-template-columns:  1fr 2fr 2fr 8fr 1fr 1fr 1fr;
     background-color: white;
     width: 100vw;
 }
@@ -18,6 +16,7 @@
     /* padding: 20%; */
     border-radius: 20%;
     cursor: pointer;
+    border: 1px solid greenyellow;
 }
 .searchh{
     width: 3%;
@@ -25,4 +24,23 @@
 }
 .s{
     width: 100vw;
+}
+.logoutbuttonsearch{
+    cursor: pointer;
+    border-radius: 20%;
+    width:100%;
+    background-color: blue;
+     /* height: 50%; */
+     color: greenyellow;
+}
+.yourcartsearch{
+    width: 30%;
+    padding: 10%;
+    cursor: pointer;
+    border: 1px solid greenyellow;
+    border-radius: 20%;
+}
+.logoutbuttonesearchbar{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr ;
 }

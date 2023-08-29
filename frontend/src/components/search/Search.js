@@ -7,8 +7,23 @@ import { tokenContext } from '../../App'
 const Search = () => {
     const [search, setSearch] = useState('')
     const [searchResuls, setSearchResuls] = useState("")
-    const {token}=useContext(tokenContext)
+    const {token,userName,setToken}=useContext(tokenContext)
     const navigate = useNavigate()
+
+//    useEffect(() => {
+   
+//         setTimeout(()=>{axios.get(`http://localhost:5000/products/search/name?name=${search}`)
+//         .then((response)=>{
+//             console.log(response);
+//             setSearchResuls(response.data)
+//         })
+//         .catch((err)=>{
+//             console.log(err);
+//         })},0)
+    
+   
+//    }, [search])
+   
     return (
     <div className='s'>
         <div className='navbar'>
@@ -25,24 +40,42 @@ const Search = () => {
         }
         }
       />
+      <img className='yourcartsearch' src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg" onClick={()=>{
+        navigate("/cart")
+    }}/>
         <h1>Khalek Bdarak SuperMarket</h1>
+        {token?<>
+        <br/>
+        {userName}
+        <div className='logoutbuttonesearchbar'>
+            <div></div>
+        <button className='logoutbuttonsearch' onClick={()=>{
+            localStorage.clear()
+            setToken(null)
+            navigate("/")
+        }}>LogOut</button>
+        <div></div>
+        </div>
+        </>:<>
         <button className="signupbutton" onClick={()=>{
             navigate("/users/register")
         }}>Sign Up</button>
         <button className='loginbutton' onClick={()=>{
             navigate('/users/login')
         }}>Login</button>
+        </>}
+        
         <div></div>
         </div>
         <br/><br/>
         <div className='searches'>
     <input type='search' placeholder='Search' className='search' onChange={(e)=>{
         if (e.target.value !== "")
-        {setSearch(e.target.value)}
+        {console.log(e.target.value)
+            setSearch(e.target.value)}
       else{
           return (<div>
-            <Products/>
-            
+            <Products/>    
         </div>)
       }
     }}/>
@@ -63,12 +96,12 @@ const Search = () => {
 
     {search ?<>
         <div className='searchCard'>
-    {searchResuls.map((elem,i)=>{
+    {searchResuls&&searchResuls.map((elem,i)=>{
         console.log(searchResuls);
         return (<div className='searchResults'>
         <img className='productimage' src={elem.img}/>
         <div>{elem.name}</div>
-        <div>Price: {elem.price} JD</div>
+        <div>{elem.price}</div>
       </div>)
     })}
     </div></>:<div>

@@ -3,7 +3,7 @@
     border-radius: 20%;
 }
 .homepagebuttoncategories{
-    width: 5%;
+    width: 40%;
     float: left;
     cursor: pointer;
     border-radius: 20%;
@@ -26,4 +26,16 @@ float: left;}
 .productCard{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+.yourcartcategories{
+    width: 10%;
+    float: left;
+    padding-left: 2%;
+    cursor: pointer;
+    border-radius: 20%;
+    border: 1px solid greenyellow;
+}
+.navbarcategories{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5fr 1fr;
 }

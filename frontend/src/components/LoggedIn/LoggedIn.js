@@ -22,17 +22,18 @@ return (
 
         <div className='username'>Welcome {userName}</div>
         {/* <br/> */}
-        <div>
+        <div className='testo'>
 
-        <img className='sb' src='https://img.freepik.com/premium-vector/search-icon-magnifying-glass-symbol-outline-icon_543062-139.jpg' onClick={()=>{
+        <img className='searchbuttonloggedin ' src='https://img.freepik.com/premium-vector/search-icon-magnifying-glass-symbol-outline-icon_543062-139.jpg' onClick={()=>{
             navigate("/search")
         }}/>
-        <button className='logoutbutton' onClick={()=>{
+
+        <button className='logoutbuttonloggedin test' onClick={()=>{
             localStorage.clear()
             setToken(null)
             navigate("/")
         }}>LogOut</button>
-<button className="addporductsbutton"onClick={()=>{
+<button className="addporductsbutton test"onClick={()=>{
     navigate("/addproduct")
 }}>Add Products</button>
 </div>

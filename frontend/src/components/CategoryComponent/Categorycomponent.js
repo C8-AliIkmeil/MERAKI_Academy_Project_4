@@ -9,6 +9,8 @@ const Categorycomponent = () => {
   return (
     
     <div className='categorycomponent'>
+        <div className='navbarcategories'>
+        <div></div>
         <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepagebuttoncategories' onClick={()=>{
             
             if (token){
@@ -18,6 +20,13 @@ const Categorycomponent = () => {
             }
             
         }}/>
+
+        <img className='yourcartcategories' src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg" onClick={()=>{
+            navigate("/cart")
+        }}/>
+        <h1>Khalek Bdarak SuperMarket</h1>
+        <div>{userName}</div>
+        </div>
         <div className='productCard'>
         {productsCateg.map((product,i)=>{
             return(<div className='productinfo'>
