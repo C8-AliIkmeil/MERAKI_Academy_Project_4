@@ -59,7 +59,7 @@ productsModel
 }
 
 const getProductBySearch = (req,res)=>{
-    // console.log(req.query.name);
+    console.log(req.query.name);
     let search = req.query.name
     // console.log(search);
     const newSearch = new RegExp(search,"gi")
