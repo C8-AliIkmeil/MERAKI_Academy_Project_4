@@ -1,10 +1,11 @@
 .navBar{
     /* background-color: red; */
     display: grid;
-    grid-template-columns: 1fr 11fr 1fr 1fr 1fr 1fr;
-    background-color: white;
-    border-radius: 6%;
+    grid-template-columns:  1fr 1fr 11fr  0.5fr 2fr 1fr ;
+    /* background-color: white; */
+    /* border-radius: 6%; */
     width: 100vw ;
+    background-color: gray;
 }
 .signupbutton{
     float:right;
@@ -28,9 +29,10 @@
     cursor: text;
 }
 .searchButton{
-    width: 50%;
-    border-radius: 20%;
+    width: 100%;
+    /* border-radius: 20%; */
     cursor: pointer;
+    height: 50%
 
 }
 .logo{
@@ -42,4 +44,16 @@
 }
 .categories{
     padding-right: 5%;
+}
+.loginbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* .rows{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+} */
+.contactus{
+    float: right;
+    color: blue;
 }

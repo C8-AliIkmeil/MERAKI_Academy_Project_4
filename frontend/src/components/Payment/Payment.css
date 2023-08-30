@@ -1,7 +1,8 @@
 .homepagebutton{
-    width: 5%;
-    float: left;
+    width: 40%;
+    /* float: left; */
     cursor: pointer;
+    border-radius: 8px;
 }
 .paymentcard{
     display: grid;
@@ -17,4 +18,13 @@
 .Pay{
     padding: 1%;
     cursor: pointer;
+}
+.navbarpayment{
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
+    background-color: gray;
+    width: 100vw;
+}
+.navbarpaymentright{
+    margin-top: 2vh;
 }

@@ -4,7 +4,7 @@ import axios from 'axios'
 import "./Categorycomponent.css"
 import { tokenContext } from '../../App' 
 const Categorycomponent = () => {
-  const {productsCateg,token,userId,productId,userName} = useContext(tokenContext)  
+  const {setToken,productsCateg,token,userId,productId,userName} = useContext(tokenContext)  
   const navigate = useNavigate()
   return (
     
@@ -22,11 +22,21 @@ const Categorycomponent = () => {
         }}/>
 
         <img className='yourcartcategories' src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg" onClick={()=>{
+            if (token){
             navigate("/cart")
+            }else{
+                navigate("/users/login")
+            }
         }}/>
         <h1>Khalek Bdarak SuperMarket</h1>
-        <div>{token?<>
-        {userName}
+        <div className='rightnavbarcategories'>
+            {token?<>
+        <div >Welcome {userName}</div>
+        <button className='logoutbuttoncategories test' onClick={()=>{
+            localStorage.clear()
+            setToken(null)
+            navigate("/")
+        }}>LogOut</button>
         </>:<>
         <button className="signupbutton" onClick={()=>{
           navigate("/users/register")
@@ -35,16 +45,18 @@ const Categorycomponent = () => {
           navigate('/users/login')
         }}>Login</button>
         
-        </>}</div>
+        </>}
+        </div>
+        <div></div>
         </div>
         <div className='productCard'>
         {productsCateg.map((product,i)=>{
-            return(<div className='productinfo'>
+            return(<div className='productinfocategory'>
             
                 <img className='productImg' src={product.img}/>
                 <div className='productName'>{product.name}</div>
                 <div className='productPrice'>{product.price}</div>
-                <img className='addtocart1' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
+                <img className='addtocart2' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
                 if (!token){
                     navigate("/users/login")
                 }else{

@@ -11,13 +11,27 @@ const Payment = () => {
   const [ccv, setCcv] = useState("")
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
-    const {token} = useContext(tokenContext)
+    const {token,setToken,userName} = useContext(tokenContext)
 const navigate = useNavigate()
     return (
     <div>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepagebutton' onClick={()=>{
-        if (token){navigate("/loggedin")}else{navigate("/")}
+        <div className='navbarpayment'>
+        <div></div>
+        <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepagebutton' onClick={()=>{
+            if (token){navigate("/loggedin")}else{navigate("/")}
         }}/>
+        <h1>Khalek Bdarak SuperMarket</h1>
+        <div className='navbarpaymentright'>
+        <div>Welcome {userName}</div>
+        <button className='logoutbuttonloggedin test' onClick={()=>{
+            localStorage.clear()
+            setToken(null)
+            navigate("/")
+        }}>LogOut</button>
+        <div></div>
+        </div>
+        </div>
+
         <div className='paymentcard'>
         <input className='cardnumber' placeholder='Card Number' onChange={(e)=>{
             setCardNumber(e.target.value)
@@ -34,8 +48,8 @@ const navigate = useNavigate()
         <input className='lastname' placeholder='Last Name' onChange={(e)=>{
                 setLastName(e.target.value)
         }}/>
-        </div>
         <button className='Pay'>Pay</button>
+        </div>
         </div>
   )
 }

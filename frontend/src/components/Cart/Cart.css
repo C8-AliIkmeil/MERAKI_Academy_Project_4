@@ -9,10 +9,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .homepage{
-    width: 5%;
+    width: 40%;
     float: left;
     float: top;
     cursor: pointer;
+    border-radius: 8px;
 }
 .deleteproduct{
     width: 20%;
@@ -35,3 +36,16 @@
 }
 /* .availablepaymentmethods{
 } */
+.navbarcart{
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
+    background-color: gray;
+}
+.logoutbuttoncart{
+    cursor: pointer;
+    border-radius: 20%;
+    width: 30%;
+    background-color: blue;
+    height: 30%;
+     color: greenyellow;
+}

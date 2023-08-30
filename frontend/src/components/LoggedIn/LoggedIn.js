@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { tokenContext } from '../../App'
 import Products from '../Products/Products'
 import Categories from '../Categories/Categories'
+import {FcSearch} from "react-icons/fc"
 const LoggedIn = () => {
 const {setToken,userName}=useContext(tokenContext)
 const navigate = useNavigate()    
@@ -24,9 +25,10 @@ return (
         {/* <br/> */}
         <div className='testo'>
 
-        <img className='searchbuttonloggedin ' src='https://img.freepik.com/premium-vector/search-icon-magnifying-glass-symbol-outline-icon_543062-139.jpg' onClick={()=>{
+        <FcSearch className='searchbuttonloggedin' onClick={()=>{
             navigate("/search")
         }}/>
+        
 
         <button className='logoutbuttonloggedin test' onClick={()=>{
             localStorage.clear()

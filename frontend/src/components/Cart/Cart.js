@@ -7,7 +7,7 @@ import { toHaveAttribute } from '@testing-library/jest-dom/matchers'
 const Cart = () => {
     const [cartList, setCartList] = useState("")
     const [errorMessage, setErrorMessage] = useState("")
-    const {token,userName} =useContext(tokenContext)
+    const {token,userName,setToken} =useContext(tokenContext)
     const [deletedItem, setDeletedItem] = useState("")
     const [deleteErrorMessage, setDeleteErrorMessage] = useState("")
     const [totalPrice, setTotalPrice] = useState(0)
@@ -37,9 +37,22 @@ const Cart = () => {
   },[])
     return (
     <div>
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tokyoship_Home_icon.svg/768px-Tokyoship_Home_icon.svg.png' className='homepage' onClick={()=>{
+        <div className='navbarcart'>
+        <div></div>
+        <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepage' onClick={()=>{
             navigate("/loggedin")
         }}/>
+        <h1>Khalek Bdarak SuperMarket</h1>
+        <div className='rightnavbar'>
+        <h4>Welcome {userName}</h4>
+        <button className='logoutbuttoncart test' onClick={()=>{
+            localStorage.clear()
+            setToken(null)
+            navigate("/")
+        }}>LogOut</button>
+        </div>
+        <div></div>
+        </div>
         <br/><br/><br/><br/><br/><br/><br/>
         {cartList?<>
         <div className='cartcard'>

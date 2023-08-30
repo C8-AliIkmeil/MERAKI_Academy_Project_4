@@ -7,7 +7,7 @@ import { tokenContext } from "../../App";
 const Search = () => {
   const [search, setSearch] = useState("");
   const [searchResuls, setSearchResuls] = useState("");
-  const { token, userName, setToken } = useContext(tokenContext);
+  const { token, userName, setToken,userId,product,productsCateg } = useContext(tokenContext);
   const navigate = useNavigate();
 
   //    useEffect(() => {
@@ -24,7 +24,7 @@ const Search = () => {
   //    }, [search])
 
   return (
-    <div className="s">
+    <div className="Search">
       <div className="navbar">
         <div></div>
         <img
@@ -130,6 +130,20 @@ const Search = () => {
                     <img className="productimage" src={elem.img} />
                     <div>{elem.name}</div>
                     <div>{elem.price}</div>
+                    <img className='addtocart1' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
+                if (!token){
+                    navigate("/users/login")
+                }else{
+                    // setProductId(prod._id)
+                    axios.post("http://localhost:5000/cart/",{userId,productId:elem._id})
+                    .then((response)=>{ 
+                        // console.log(response.data);
+                    })
+                    .catch((err)=>{
+                        console.log(err);
+                    })
+                }
+            }}/>
                   </div>
                 );
               })}

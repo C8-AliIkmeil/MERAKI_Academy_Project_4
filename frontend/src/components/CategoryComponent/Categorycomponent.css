@@ -1,17 +1,21 @@
 .productImg{
     width: 40%;
-    border-radius: 20%;
+    border-radius: 8px;
+    margin-top: 5vh;
 }
 .homepagebuttoncategories{
-    width: 50%;
+    width: 73%;
     float: left;
     cursor: pointer;
-    border-radius: 20%;
+    border-radius: 8px;
+    /* border: 1px solid green; */
+    /* margin-right: 10px; */
 }
-.addtocart1{
+.addtocart2{
     width: 10%;
     cursor: pointer;
-    border-radius: 20%;
+    border-radius: 8px;
+    /* float: bottom; */
 }
 .yourcart{
     width: 5%;
@@ -22,21 +26,37 @@ float: left;}
 } */
 .categorycomponent{
     display: grid;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 0.7fr 3fr;
 }
 .productCard{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 4vh;
 }
 .yourcartcategories{
-    width: 50%;
+    width: 73%;
     float: left;
     /* padding-left: 2%; */
     cursor: pointer;
-    border-radius: 20%;
-    border: 1px solid greenyellow;
+    border-radius: 8px;
+    /* border: 1px solid greenyellow; */
 }
 .navbarcategories{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 7fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 7fr 1fr 1fr;
+    background-color: gray;
+}
+.productinfocategory{
+    border: 1px solid green;
+    margin: 10px;
+    border-radius: 8px;
+
+}
+.logoutbuttoncategories{
+    cursor: pointer;
+    border-radius: 8px;
+    width: 60%;
+    background-color: blue;
+     height: 40%;
+     /* color: greenyellow;  */
 }
