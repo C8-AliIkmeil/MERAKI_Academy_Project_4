@@ -11,10 +11,11 @@ const Addproducts = () => {
     const [errorMessage, setErrorMessage] = useState("")
     const navigate = useNavigate()
     return (
-    <div>Addproducts
-        <button onClick={()=>{
-            navigate("/users/login")
-        }} >Login</button>
+    <div>
+        <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepagebuttonaddproducts' onClick={()=>{
+            navigate("/loggedin")
+        }}/>
+        Addproducts
         <input placeholder='Product Name' onChange={(e)=>{
             setName(e.target.value)
         }} />

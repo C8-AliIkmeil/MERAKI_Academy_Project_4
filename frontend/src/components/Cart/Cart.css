@@ -4,9 +4,13 @@
 .productimg{
     width: 20%;
 }
-.cartproductcard{
+/* .cartproductcard{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+} */
+.cartcard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .homepage{
     width: 40%;
@@ -48,4 +52,9 @@
     background-color: blue;
     height: 30%;
      color: greenyellow;
+}
+.productImg{
+    width: 40%;
+    border-radius: 8px;
+    margin-top: 5vh;
 }

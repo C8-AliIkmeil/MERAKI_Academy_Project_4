@@ -53,21 +53,16 @@ const Cart = () => {
         </div>
         <div></div>
         </div>
-        <br/><br/><br/><br/><br/><br/><br/>
+        {/* <br/><br/><br/><br/><br/><br/><br/> */}
         {cartList?<>
         <div className='cartcard'>
-            
-            
-            
             {cartList.map((prod,i)=>{
                 // console.log(prod);
                 return(<div className='cartproductcard'>
-                    <img src={prod.productId.img} className='productimg' />
-                    <div className='productid'>{prod.productId.name}</div>
-                    <div className='productprice'>
-                        {/* {setTotalPrice(totalPrice+prod.productId.price)} */}
-                        {prod.productId.price}
-                        </div>
+                    <img className='productImg' src={prod.productId.img}/>
+                <div className='productName'>{prod.productId.name}</div>
+                <div className='productPrice'>{prod.productId.price}</div>
+                
                     <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/IPA_Unicode_0x0078.svg/1200px-IPA_Unicode_0x0078.svg.png' className='deleteproduct' onClick={()=>{
                         // console.log(prod.productId._id);
                         axios.delete(`http://localhost:5000/cart/${prod._id}`,{headers:{Authorization:`Bearer ${token}`}})
@@ -84,12 +79,9 @@ const Cart = () => {
                             console.log(err);
                         })
                     }}/>
-
-                    <br/>
-                    
-                    
                 </div>)
             })}
+            </div>
             <div className='price'>
             <div>total price : {totalPrice}</div>
             <img src='https://m.media-amazon.com/images/I/51WfA1vXkmL.jpg' className='checkoutbutton' onClick={()=>{
@@ -100,7 +92,6 @@ const Cart = () => {
             <img src='https://i.ytimg.com/vi/i09C02151PI/maxresdefault.jpg' className='visa'/>
             </div>
             </div>
-        </div>
         </>:<>{errorMessage}</>}
     </div>
   )
