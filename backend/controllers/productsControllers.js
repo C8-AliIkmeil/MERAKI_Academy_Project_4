@@ -74,7 +74,7 @@ const getProductBySearch = (req,res)=>{
     })
 }
 
-
+    
 const getProductByCategId = (req,res)=>{
     let id = req.params.id
     productsModel.find({category:id})
