@@ -5,7 +5,7 @@
     padding-top: 2%;
 } */
 .homepagebuttonloggedin{
-    width: 41%;
+    width: 42.5%;
     float: left;
     cursor: pointer;
     border-radius: 8px;
@@ -16,7 +16,7 @@
     float: right;
 }
 .yourcartloggedin{
-    width: 41%;
+    width: 42.5%;
     float: left;
     padding-left: 2%;
     cursor: pointer;
@@ -32,12 +32,19 @@
      color: greenyellow;
 }
 .logoutbuttonloggedin{
-    cursor: pointer;
-    border-radius: 8px;
-    width: 30%;
-    background-color: blue;
-     height: 60%;
-     color: greenyellow;
+      /* margin-left: 1vw; */
+      cursor: pointer;
+      font-size: 15px;
+      background: #01d28e;
+      border: 1px solid #01d28e;
+      color: #fff;
+      /* padding: 10px 20px; */
+      width: 40%;
+      height: 60%;
+      margin-left: 4%;
+}
+.logoutbuttonloggedin:hover{
+    background-color: gray;
 }
 .searchbuttonloggedin{
     width: 15%;
@@ -49,6 +56,8 @@
     grid-template-columns: 1fr 1fr 3fr 2fr ;
     background-color: gray;
     width: 100vw;
+    height: 84px;
+
 }
 .box{
     display: grid;

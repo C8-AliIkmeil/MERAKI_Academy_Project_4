@@ -1,13 +1,19 @@
 .categoryimg{
-    width: 120%;
+    width: 100%;
     cursor: pointer;
      border-radius: 20%;
+     height: 70%;
+     /* margin-right: 100px; */
 }
 .categorycard{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     ;
+    /* margin-left: 20vw; */
 }
 .categoryinfo{
+    border: 1px solid blue;
+    margin: 10px;
     padding: 10%;
+    border-radius: 8px;
 }

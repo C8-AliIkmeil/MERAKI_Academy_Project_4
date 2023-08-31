@@ -39,12 +39,12 @@ const Cart = () => {
     <div>
         <div className='navbarcart'>
         <div></div>
-        <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepage' onClick={()=>{
+        <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepagecart' onClick={()=>{
             navigate("/loggedin")
         }}/>
         <h1>Khalek Bdarak SuperMarket</h1>
         <div className='rightnavbar'>
-        <h4>Welcome {userName}</h4>
+        <h4 className='welcome'>Welcome {userName}</h4>
         <button className='logoutbuttoncart test' onClick={()=>{
             localStorage.clear()
             setToken(null)
@@ -52,6 +52,9 @@ const Cart = () => {
         }}>LogOut</button>
         </div>
         <div></div>
+        </div>
+        <div>
+            
         </div>
         {/* <br/><br/><br/><br/><br/><br/><br/> */}
         {cartList?<>
@@ -61,7 +64,7 @@ const Cart = () => {
                 return(<div className='cartproductcard'>
                     <img className='productImg' src={prod.productId.img}/>
                 <div className='productName'>{prod.productId.name}</div>
-                <div className='productPrice'>{prod.productId.price}</div>
+                <div className='productPrice'>{prod.productId.price} JD</div>
                 
                     <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/IPA_Unicode_0x0078.svg/1200px-IPA_Unicode_0x0078.svg.png' className='deleteproduct' onClick={()=>{
                         // console.log(prod.productId._id);
@@ -83,12 +86,12 @@ const Cart = () => {
             })}
             </div>
             <div className='price'>
-            <div>total price : {totalPrice}</div>
+                <div className='totalprice'>Total Price : {totalPrice} JD</div>
             <img src='https://m.media-amazon.com/images/I/51WfA1vXkmL.jpg' className='checkoutbutton' onClick={()=>{
                 navigate("/payment")
             }}/>
             <div className='availablepaymentmethods'>
-            Available Payment Methods
+            <h5>Available Payment Methods</h5>
             <img src='https://i.ytimg.com/vi/i09C02151PI/maxresdefault.jpg' className='visa'/>
             </div>
             </div>

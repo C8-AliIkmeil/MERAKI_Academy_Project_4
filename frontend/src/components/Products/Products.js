@@ -43,7 +43,7 @@ const Products = () => {
                 <Card.Body>
                   <Card.Title>{prod.name}</Card.Title>
                   <Card.Text>
-                    Price : {prod.price}
+                    Price : {prod.price} JD
                   </Card.Text>
                    <BsCartPlus className='addtocart' onClick={()=>{
                 if (!token){

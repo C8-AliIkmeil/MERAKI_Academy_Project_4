@@ -25,7 +25,7 @@ const Search = () => {
 
   return (
     <div className="Search">
-      <div className="navbar">
+      <div className="navbarsearch">
         <div></div>
         <img
           className="homepagesearch"
@@ -40,7 +40,7 @@ const Search = () => {
         />
         <img
           className="yourcartsearch"
-          src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg"
+          src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png"
           onClick={() => {
             navigate("/cart");
           }}
@@ -48,10 +48,10 @@ const Search = () => {
         <h1>Khalek Bdarak SuperMarket</h1>
         {token ? (
           <>
-            <br />
-            {userName}
+            {/* <br /> */}
             <div className="logoutbuttonesearchbar">
-              <div></div>
+              {/* <div></div> */}
+            Welcome {userName}
               <button
                 className="logoutbuttonsearch"
                 onClick={() => {
@@ -62,7 +62,7 @@ const Search = () => {
               >
                 LogOut
               </button>
-              <div></div>
+              {/* <div></div> */}
             </div>
           </>
         ) : (
@@ -124,13 +124,13 @@ const Search = () => {
           <div className="searchCard">
             {searchResuls &&
               searchResuls.map((elem, i) => {
-                console.log(searchResuls);
+                // console.log(searchResuls);
                 return (
                   <div className="searchResults">
                     <img className="productimage" src={elem.img} />
                     <div>{elem.name}</div>
-                    <div>{elem.price}</div>
-                    <img className='addtocart1' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
+                    <div>{elem.price} JD</div>
+                    <img className='addtocart3' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
                 if (!token){
                     navigate("/users/login")
                 }else{

@@ -21,7 +21,7 @@ const Categorycomponent = () => {
             
         }}/>
 
-        <img className='yourcartcategories' src="https://cdnimg.webstaurantstore.com/images/products/large/446099/1740901.jpg" onClick={()=>{
+        <img className='yourcartcategories' src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" onClick={()=>{
             if (token){
             navigate("/cart")
             }else{
@@ -29,24 +29,30 @@ const Categorycomponent = () => {
             }
         }}/>
         <h1>Khalek Bdarak SuperMarket</h1>
-        <div className='rightnavbarcategories'>
+        {/* <div className='rightnavbarcategorie'> */}
             {token?<>
+            <div className='rightnavbarcategoriesloggedin'>
+
         <div >Welcome {userName}</div>
         <button className='logoutbuttoncategories test' onClick={()=>{
             localStorage.clear()
             setToken(null)
             navigate("/")
         }}>LogOut</button>
+        </div>
         </>:<>
-        <button className="signupbutton" onClick={()=>{
-          navigate("/users/register")
+        <div className='rightnavbarcategoriesnotloggedin'>
+
+        <button className="signupbuttoncateg" onClick={()=>{
+            navigate("/users/register")
         }}>Sign Up</button>
-        <button className='loginbutton' onClick={()=>{
-          navigate('/users/login')
+        <button className='loginbuttoncateg' onClick={()=>{
+            navigate('/users/login')
         }}>Login</button>
+        </div>
         
         </>}
-        </div>
+        
         <div></div>
         </div>
         <div className='productCard'>
@@ -55,7 +61,7 @@ const Categorycomponent = () => {
             
                 <img className='productImg' src={product.img}/>
                 <div className='productName'>{product.name}</div>
-                <div className='productPrice'>{product.price}</div>
+                <div className='productPrice'>{product.price} JD</div>
                 <img className='addtocart2' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
                 if (!token){
                     navigate("/users/login")

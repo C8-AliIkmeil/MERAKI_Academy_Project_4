@@ -1,28 +1,66 @@
 .register{
-    padding-right:10% ;
-    padding-left: 10%;
-    padding-top: 2%;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
 }
 .homebutton{
-    float: left;
-    width: 5%;
+    /* float: left; */
+    width: 33%;
     cursor: pointer;
+    border-radius: 8px;
+}
+.bottomsection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+    .middlebottomsection{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 50%;
+        /* margin: 10; */
+    }
+
+
+.navbarregister{
+    display: grid;
+    grid-template-columns: 1fr 2fr 5fr 2fr 1fr;
+    background-color: gray;
+    width: 100vw;
+    height: 84px;
+}
+.logingdevv{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 .loginbuttonregister{
-     /* float: right;  */
-     border-radius: 20%;
-    width: 10%;
-    background-color: blue;
-    cursor: pointer; 
-     /* height: 50%; */
-     color: greenyellow;
-      
+    /* margin-top: 10px; */
+    /* margin-left: 2vw; */
+    cursor: pointer;
+    font-size: 15px;
+    background: gray;
+    border: 1px solid #01d28e;
+    color: #fff;
+    /* padding: 10px 20px; */
+    width: 100%;
+    height: 80%;;
+}
+.loginbuttonregister:hover{
+    background-color: green;
+}
+.inputregister{
+    margin: 3px;
 }
 .addaccount{
-    border-radius: 20%;
-    width: 10%;
-    background-color: blue;
-    cursor: pointer; 
-     /* height: 50%; */
-     color: greenyellow;
+    cursor: pointer;
+    font-size: 15px;
+    background: #01d28e;
+    border: 1px solid #01d28e;
+    color: #fff;
+    /* padding: 10px 20px; */
+    width: 50%;
+    /* align-self: center; */
+    /* height: 60%; */
+    margin-left: 25%;
+}
+.addaccount:hover{
+    background-color: gray;
 }

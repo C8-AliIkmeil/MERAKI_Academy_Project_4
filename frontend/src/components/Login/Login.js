@@ -25,6 +25,7 @@ const Login = () => {
         src="https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg"
         onClick={() => navigate("/")}
         />
+        <h1>Khalek Bdarak SuperMarket</h1>
       <div className="registerbuttondiv">
         <div></div>
         mesh 3amel account 3ena? ekbes hoon
