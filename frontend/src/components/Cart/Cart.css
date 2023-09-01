@@ -86,4 +86,8 @@ grid-template-columns: 1fr 2fr;
 }
 .logoutbuttoncart{
     border-radius: 8px;
+    transition: .5s ease;
+}
+.logoutbuttoncart:hover{
+    background-color: gray;
 }

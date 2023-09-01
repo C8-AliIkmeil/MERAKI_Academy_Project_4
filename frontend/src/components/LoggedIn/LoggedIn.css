@@ -44,6 +44,7 @@
       height: 60%;
       margin-left: 4%;
       border-radius: 8px;
+      transition: .5s ease;
 }
 .logoutbuttonloggedin:hover{
     background-color: gray;

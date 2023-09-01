@@ -129,10 +129,11 @@ const Search = () => {
                 // console.log(searchResuls);
                 return (
                   <div className="searchResults">
-                    <img className="productimage" src={elem.img} />
-                    <div>{elem.name}</div>
-                    <div>{elem.price} JD</div>
-                    <img className='addtocart3' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{
+                    {/* <img className="productimage" src={elem.img} /> */}
+                    <div class="container">
+  <img src={elem.img}  alt="Avatar" class="imageproducts" />
+  <div class="middle">
+    <div onClick={()=>{
                 if (!token){
                     navigate("/users/login")
                 }else{
@@ -145,7 +146,12 @@ const Search = () => {
                         console.log(err);
                     })
                 }
-            }}/>
+                
+            }}   class="text">Add {elem.name} To Cart</div>
+  </div>
+</div>
+                    <div>{elem.name}</div>
+                    <div>Price: {elem.price} JD</div>
                   </div>
                 );
               })}
