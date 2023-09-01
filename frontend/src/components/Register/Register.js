@@ -26,7 +26,7 @@ const Register = (req, res) => {
             navigate("/");
           }}
         />
-        <h1>Khalek Bdarak SuperMarket</h1>
+        <h1 className="header">Khalek Bdarak SuperMarket</h1>
         <div className="logingdevv">
           <h4>Already have account?</h4>
           <button

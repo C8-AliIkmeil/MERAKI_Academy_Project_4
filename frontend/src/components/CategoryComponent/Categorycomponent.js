@@ -28,7 +28,7 @@ const Categorycomponent = () => {
                 navigate("/users/login")
             }
         }}/>
-        <h1>Khalek Bdarak SuperMarket</h1>
+        <h1 className='header'>Khalek Bdarak SuperMarket</h1>
         {/* <div className='rightnavbarcategorie'> */}
             {token?<>
             <div className='rightnavbarcategoriesloggedin'>
@@ -59,7 +59,27 @@ const Categorycomponent = () => {
         {productsCateg.map((product,i)=>{
             return(<div className='productinfocategory'>
             
-                <img className='productImg' src={product.img}/>
+                {/* <img className='productImg' src={product.img}/> */}
+                <div class="container">
+  <img src={product.img}  alt="Avatar" class="imageproducts" />
+  <div class="middle">
+    <div onClick={()=>{
+                if (!token){
+                    navigate("/users/login")
+                }else{
+                    // setProductId(prod._id)
+                    axios.post("http://localhost:5000/cart/",{userId,productId:product._id})
+                    .then((response)=>{ 
+                        // console.log(response.data);
+                    })
+                    .catch((err)=>{
+                        console.log(err);
+                    })
+                }
+                
+            }}   class="text">Add {product.name} To Cart</div>
+  </div>
+</div>
                 <div className='productName'>{product.name}</div>
                 <div className='productPrice'>{product.price} JD</div>
                 <img className='addtocart2' src='https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=' onClick={()=>{

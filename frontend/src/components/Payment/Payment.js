@@ -32,7 +32,7 @@ const navigate = useNavigate()
         <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepagebutton' onClick={()=>{
             if (token){navigate("/loggedin")}else{navigate("/")}
         }}/>
-        <h1>Khalek Bdarak SuperMarket</h1>
+        <h1 className='header'>Khalek Bdarak SuperMarket</h1>
         <div className='navbarpaymentright'>
         <div>Welcome {userName}</div>
         <button className='logoutbuttonloggedin test' onClick={()=>{
@@ -94,6 +94,7 @@ const navigate = useNavigate()
                 </MDBCol>
                 <MDBCol size="3">
                   <MDBBtn color="info" rounded size="lg">
+                    Pay
                     <MDBIcon fas icon="arrow-right" />
                   </MDBBtn>
                 </MDBCol>

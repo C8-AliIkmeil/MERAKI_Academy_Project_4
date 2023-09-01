@@ -23,13 +23,12 @@ const Categories = () => {
     return (
 
     <div className='categoriespage'>
-        <br/>
-        <br/>
+      
         {categoryList?<div className='categorycard'>
             {categoryList.map((categ,i)=>{
                 return (<div className='categoryinfo'>
-                <img className='categoryimg' src={categ.img}
-                onClick={()=>{
+          <div class="container">
+  <img src={categ.img} onClick={()=>{
                   axios.get(`http://localhost:5000/products/${categ._id}`)
                   .then((response)=>{
                     // setCatego(response.data.category)
@@ -40,7 +39,23 @@ const Categories = () => {
                   .catch((err)=>{
                     console.log(err.message);
                   })
-                }}/>
+                }} alt="Avatar" class="image" />
+  <div class="middle">
+    <div onClick={()=>{
+                  axios.get(`http://localhost:5000/products/${categ._id}`)
+                  .then((response)=>{
+                    // setCatego(response.data.category)
+                    // console.log(response.data);
+                    setProductsCateg(response.data.categories)
+                    navigate("/categorycomponent")
+                  })
+                  .catch((err)=>{
+                    console.log(err.message);
+                  })
+                }} class="text">{categ.name}</div>
+  </div>
+</div>
+                
                     <div>{categ.name}</div>
                 </div>)
             })}

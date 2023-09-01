@@ -78,6 +78,7 @@ input[type="password"] {
     border: 1px solid #01d28e;
     color:#01d28e ;
     padding: 10px 20px;
+    border-radius: 8px;
   }
   .loginButtonlogin:hover {
     background: white;

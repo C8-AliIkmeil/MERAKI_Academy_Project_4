@@ -51,7 +51,9 @@ const Search = () => {
             {/* <br /> */}
             <div className="logoutbuttonesearchbar">
               {/* <div></div> */}
-            Welcome {userName}
+            <div className="welcomemessage">
+                Welcome {userName}
+                </div>
               <button
                 className="logoutbuttonsearch"
                 onClick={() => {
@@ -151,7 +153,7 @@ const Search = () => {
         </>
       ) : (
         <div>
-            no products
+            Type the product name to search for it
           {/* <Products /> */}
         </div>
       )}

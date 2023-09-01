@@ -18,7 +18,7 @@ return (
     <img className='yourcartloggedin' src="https://cdn-icons-png.flaticon.com/512/3081/3081840.png" onClick={()=>{
         navigate("/cart")
     }}/>
-        <h1>Khalek Bdarak SuperMarket</h1>
+        <h1 className='header'>Khalek Bdarak SuperMarket</h1>
         <div className='box'>
 
         <div className='username'>Welcome {userName}</div>
@@ -35,9 +35,10 @@ return (
             setToken(null)
             navigate("/")
         }}>LogOut</button>
-<button className="addporductsbutton test"onClick={()=>{
+{/* <button className="addporductsbutton test"onClick={()=>{
     navigate("/addproduct")
-}}>Add Products</button>
+}}>Add Products</button> */}
+{/* <div></div> */}
 </div>
 </div>
         

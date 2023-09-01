@@ -28,19 +28,19 @@
     cursor: pointer;
 }
 .checkoutbutton{
-    width: 40%;
+    width: 55%;
     border-radius: 10%;
     padding-left: 10%;
     cursor: pointer;
     ;
 }
 .visa{
-    width: 30%;
+    width: 60%;
     float: right;
 }
 .price{
     display: grid;
-    grid-template-columns:  1fr 1fr 2fr;
+    grid-template-columns: 4fr 3fr 2fr 3fr;
     background-color: gray;
 }
 .availablepaymentmethods{
@@ -80,4 +80,10 @@ grid-template-columns: 1fr 2fr;
 .totalprice{
     font-size: 200%;
     color: white;
+}
+.welcome{
+    color: white;
+}
+.logoutbuttoncart{
+    border-radius: 8px;
 }

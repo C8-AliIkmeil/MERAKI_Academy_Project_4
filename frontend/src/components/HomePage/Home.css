@@ -20,6 +20,15 @@
     /* padding: 10px 20px; */
     width: 100%;
     height: 50%;
+    border-radius: 8px;
+}
+.signupbutton:hover{
+    
+        width: 110%;
+        opacity:1;
+        background-color: gray;
+    
+    
 }
 .loginbutton{
     /* margin-top: 10px; */
@@ -32,6 +41,13 @@
     /* padding: 10px 20px; */
     width: 100%;
     height: 50%;
+    border-radius: 8px;
+
+}
+.loginbutton:hover{
+    width: 110%;
+    opacity:1;
+    background-color: #01d28e;
 
 }
 .search{

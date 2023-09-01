@@ -21,7 +21,7 @@ const Home = () => {
         <div className="navBar">
           <div></div>
       <img src="https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg" className="logo"/>
-      <h1>Khalek Bdarak SuperMarket</h1>
+      <h1 className='header'>Khalek Bdarak SuperMarket</h1>
 
         {/* <img className='searchButton' src='https://img.freepik.com/premium-vector/search-icon-magnifying-glass-symbol-outline-icon_543062-139.jpg' onClick={()=>{
           navigate("/search")

@@ -42,9 +42,9 @@ const Cart = () => {
         <img src='https://scalebranding.com/wp-content/uploads/2021/07/Supermarket-E-Logo.jpg' className='homepagecart' onClick={()=>{
             navigate("/loggedin")
         }}/>
-        <h1>Khalek Bdarak SuperMarket</h1>
+        <h1 className='header'>Khalek Bdarak SuperMarket</h1>
         <div className='rightnavbar'>
-        <h4 className='welcome'>Welcome {userName}</h4>
+        <h5 className='welcome'>Welcome {userName}</h5>
         <button className='logoutbuttoncart test' onClick={()=>{
             localStorage.clear()
             setToken(null)
@@ -54,7 +54,7 @@ const Cart = () => {
         <div></div>
         </div>
         <div>
-            
+
         </div>
         {/* <br/><br/><br/><br/><br/><br/><br/> */}
         {cartList?<>
@@ -62,11 +62,11 @@ const Cart = () => {
             {cartList.map((prod,i)=>{
                 // console.log(prod);
                 return(<div className='cartproductcard'>
-                    <img className='productImg' src={prod.productId.img}/>
-                <div className='productName'>{prod.productId.name}</div>
-                <div className='productPrice'>{prod.productId.price} JD</div>
-                
-                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/IPA_Unicode_0x0078.svg/1200px-IPA_Unicode_0x0078.svg.png' className='deleteproduct' onClick={()=>{
+                    
+                    <div class="container">
+  <img src={prod.productId.img}  alt="Avatar" class="imageproducts" />
+  <div class="middle">
+    <div onClick={()=>{
                         // console.log(prod.productId._id);
                         axios.delete(`http://localhost:5000/cart/${prod._id}`,{headers:{Authorization:`Bearer ${token}`}})
                         .then((response)=>{
@@ -81,11 +81,17 @@ const Cart = () => {
                             setDeleteErrorMessage("Something went Wrong please refresh your page")
                             console.log(err);
                         })
-                    }}/>
+                    }}   class="text">Delete {prod.productId.name} From Cart</div>
+  </div>
+</div>
+                <div className='productName'>{prod.productId.name}</div>
+                <div className='productPrice'>{prod.productId.price} JD</div>
+            
                 </div>)
             })}
             </div>
             <div className='price'>
+                <div></div>
                 <div className='totalprice'>Total Price : {totalPrice} JD</div>
             <img src='https://m.media-amazon.com/images/I/51WfA1vXkmL.jpg' className='checkoutbutton' onClick={()=>{
                 navigate("/payment")

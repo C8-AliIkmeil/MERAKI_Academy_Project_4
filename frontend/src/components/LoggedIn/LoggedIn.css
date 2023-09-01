@@ -14,6 +14,7 @@
 }
 .username{
     float: right;
+    color: white;
 }
 .yourcartloggedin{
     width: 42.5%;
@@ -42,6 +43,7 @@
       width: 40%;
       height: 60%;
       margin-left: 4%;
+      border-radius: 8px;
 }
 .logoutbuttonloggedin:hover{
     background-color: gray;
@@ -50,6 +52,7 @@
     width: 15%;
     cursor: pointer;
     height: 50%;
+    border-radius: 8px;
 }
 .navBarloggedin{
     display: grid;
@@ -68,4 +71,7 @@
     /* justify-content: space-around; */
     gap: 10%;
     margin-left: 10%;
+}
+.header{
+    color: white;
 }
