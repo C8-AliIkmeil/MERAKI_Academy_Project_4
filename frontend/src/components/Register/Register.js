@@ -43,12 +43,65 @@ const Register = (req, res) => {
       </div>
 
       <div className="bottomsection">
-        <div></div>
-        <div className="middlebottomsection">
-          <h2>Make your Khalek Bdarak accout from here</h2>
-          <h3>Kindly fill your information to make your account</h3>
+        {/* <div></div> */}
+        {/* <div className="middlebottomsection"> */}
+          {/* <h2>Make your Khalek Bdarak accout from here</h2> */}
+          {/* <h3>Kindly fill your information to make your account</h3> */}
 
-          <input
+          <div id="login-box">
+  <div class="left">
+    <h1>Sign up</h1>
+    
+    <input type="text" name="username" placeholder="First Name" onChange={(e) => {
+              setFirstName(e.target.value);
+            }} />
+    <input type="text" name="email" placeholder="Last Name"  onChange={(e) => {
+              setLastName(e.target.value);
+            }} />
+    <input type="text" name="email" placeholder="E-mail"  onChange={(e) => {
+              setEmail(e.target.value);
+            }}/>
+
+    <input type="password" name="password" placeholder="Password" onChange={(e) => {
+              setPassword(e.target.value);
+            }}/>
+    {/* <input type="password" name="password2" placeholder="Retype password" /> */}
+    <input type="text" name="email" placeholder="Age"   onChange={(e) => {
+              setAge(e.target.value);
+            }}/>
+             <input type="text" name="email" placeholder="Location"    onChange={(e) => {
+              setLocation(e.target.value);
+            }}/>
+
+    <input type="submit" name="signup_submit" value="Sign me up"  onClick={() => {
+              axios
+                .post("http://localhost:5000/users/register", {
+                  firstName,
+                  lastName,
+                  email,
+                  password,
+                  age,
+                  location,
+                })
+                .then((response) => {
+                  setSuccessMessage(response.data.message);
+                })
+                .catch((err) => {
+                  setErrorMessage("This email is already exist");
+                });
+            }} />
+  </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    
+    <button class="social-signin facebook">Log in with facebook</button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <button class="social-signin google">Log in with Google+</button>
+  </div>
+  <div class="or">OR</div>
+</div>
+          {/* <input
           className="firstName inputregister"
             type="text"
             placeholder="First name"
@@ -82,7 +135,7 @@ const Register = (req, res) => {
             />
             {/* <br></br> */}
           
-          <input
+          {/* <input
           className="inputregister"
             type="number"
             placeholder="Age"
@@ -97,8 +150,8 @@ const Register = (req, res) => {
             onChange={(e) => {
               setLocation(e.target.value);
             }}
-          />
-          <button
+          /> */} 
+          {/* <button
             className="addaccount"
             onClick={() => {
               axios
@@ -119,7 +172,7 @@ const Register = (req, res) => {
             }}
           >
             Make account
-          </button>
+          </button> */}
           {successMessage && <>{navigate("/backtologin")}</>}
           {errorMessage && <div>{errorMessage}</div>}
           {/* <h4>Already have accout?</h4>         */}
@@ -129,7 +182,7 @@ const Register = (req, res) => {
         </div>
         <div></div>
       </div>
-    </div>
+    // </div>
   );
 };
 
