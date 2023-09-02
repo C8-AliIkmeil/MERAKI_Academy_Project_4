@@ -64,7 +64,9 @@
     margin-top: 3vh;
 }
 .logo{
-    border-radius: 20%  ;
+    border-radius: 8px;
+    margin-left: 1.6vw;
+    width: 101%;
 }
 .navBarrows{
     display: grid;

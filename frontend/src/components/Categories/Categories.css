@@ -59,5 +59,10 @@
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+    border-radius: 8px;
+    transition: .5s ease;
   }
-  
+  .text:hover{
+    background-color: gray;
+
+  }

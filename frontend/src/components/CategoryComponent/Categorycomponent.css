@@ -78,10 +78,11 @@ float: left;}
     border: 1px solid #01d28e;
     color: #fff;
     /* padding: 10px 20px; */
-    width: 70%;
+    width: 55%;
     height: 50%;
     border-radius: 8px;
-    margin-left: 1vw;
+    margin-left: 2vw;
+    /* margin-bottom: 5vh; */
     /* transition: .5s ease; */
     /* margin-right: 3.5vw; */
 }
@@ -98,10 +99,10 @@ float: left;}
     border: 1px solid #01d28e;
     color: #fff;
     /* padding: 10px 20px; */
-    width: 70%;
+    width: 55%;
     height: 50%;
     border-radius: 8px;
-    margin-left: 2vw;
+    margin-left: 6vw;
     /* margin-right: 3.5vw; */
 }
 .signupbuttoncateg:hover{
