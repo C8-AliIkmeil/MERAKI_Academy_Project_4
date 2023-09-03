@@ -95,9 +95,18 @@ const Register = (req, res) => {
   <div class="right">
     <span class="loginwith">Sign in with<br />social network</span>
     
-    <button class="social-signin facebook">Log in with facebook</button>
+    <a href="https://www.facebook.com/">
+    <button class="social-signin facebook" onClick={()=>{
+
+    } }  >Log in with facebook</button>
+    </a>
+    <a href="https://twitter.com/?lang=ar">
     <button class="social-signin twitter">Log in with Twitter</button>
+    </a>
+    <a href="https://accounts.google.com/InteractiveLogin/identifier?elo=1&ifkv=AXo7B7Vvt7GmwGsQG2bvWckehmZo8mqO0wI-8uYYAvkC9eVob4fMhi16Yq6Nqkl1xl_z0Sn3vieGFw&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+
     <button class="social-signin google">Log in with Google+</button>
+    </a>
   </div>
   <div class="or">OR</div>
 </div>
