@@ -1,0 +1,27 @@
+.firstimg{
+    width: 200px ;
+    height: 200px;
+}
+.par1{
+    width: 200px;
+    height: 200px;
+}
+.img2{
+    width: 200px;
+    height: 200px;
+}
+.par2{
+    align-items: center;
+}
+.p1d{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr ;
+    
+}
+.par1{
+    color: red;
+    font-size: large;
+}
+.par3{
+    color: red;
+}
