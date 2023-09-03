@@ -93,7 +93,9 @@ const navigate = useNavigate()
                   />
                 </MDBCol>
                 <MDBCol size="3">
-                  <MDBBtn color="info" rounded size="lg">
+                  <MDBBtn color="info" rounded size="lg" onClick={()=>{
+                    navigate("/paymentsuccess")
+                  }}>
                     Pay
                     <MDBIcon fas icon="arrow-right" />
                   </MDBBtn>
